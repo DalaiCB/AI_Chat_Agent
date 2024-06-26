@@ -1,0 +1,7 @@
+streamlit
+pandas
+requests
+icecream
+langchain
+langchain-community
+openai
