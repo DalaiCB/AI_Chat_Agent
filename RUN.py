@@ -15,11 +15,6 @@ def clear_sessions_csv():
 def run_streamlit_app():
     subprocess.run(["streamlit", "run", "app.py"])
 
-def signal_handler(sig, frame):
-    print("\nExiting...")
-    sys.exit(0)
-
 if __name__ == "__main__":
-    signal.signal(signal.SIGINT, signal_handler)
     clear_sessions_csv()
     run_streamlit_app()
