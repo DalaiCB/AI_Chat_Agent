@@ -1,6 +1,5 @@
 import os
 import sys
-import signal
 import subprocess
 
 def clear_sessions_csv():
