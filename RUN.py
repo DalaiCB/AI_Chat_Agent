@@ -1,5 +1,4 @@
 import os
-import sys
 import subprocess
 
 def clear_sessions_csv():
