@@ -36,7 +36,6 @@ def query_interpretation(query):
     )
     
     message_content = response.choices[0].message.content.strip()
-    print(f"\nInterpretation: {message_content}\n")
 
     return message_content
 
@@ -47,5 +46,3 @@ if __name__ == "__main__":
 
     query = sys.argv[1]
     query_interpretation(query)
-
-
