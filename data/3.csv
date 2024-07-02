@@ -1,0 +1,146 @@
+PartNumber,Series,Type,Manufacturer,Status,Demo,Sample,Efficiency,MinOutputVoltage,MaxOutputVoltage,OutputCurrent,OutputVoltage,MinInputVoltage,MaxInputVoltage,Size,ControlType,OutputPower,NumberOfOutputs,Ripple,Warranty,OutputType,MinOperatingTemp,MaxOperatingTemp,Application,Length,Width,Height
+CSU1300ADC-3-100,CSU1300ADC,Front End PSUs DC-input,Artesyn,Active,False,False,,11.8,12.6,106.5,12.2,-72,-48,"7.28"" x 2.89""",Analog,1300,2,,2,,-5,55,IT Infrastructure,7.28,2.89,1.57
+CSU1300ADC-3-101,CSU1300ADC,Front End PSUs DC-input,Artesyn,Active,False,False,,11.8,12.6,106.5,12.2,-72,-48,"7.28"" x 2.89""",Analog,1300,2,,2,,-5,55,IT Infrastructure,7.28,2.89,1.57
+TF1500A12K,TF1500,Enclosed PSU,SLPower,Active,False,False,,0,12.6,125,12,90,264,"11.02"" x 5.0"" x 2.5""",,1500,1,,3,,-25,60,Industrial,11.02,5,2.5
+TF1500A15K,TF1500,Enclosed PSU,SLPower,Active,False,False,,0,15.75,100,15,90,264,"11.02"" x 5.0"" x 2.5""",,1500,1,,3,,-25,60,Industrial,11.02,5,2.5
+TF1500A24K,TF1500,Enclosed PSU,SLPower,Active,False,False,,0,25.2,62.5,24,90,264,"11.02"" x 5.0"" x 2.5""",,1500,1,,3,,-25,60,Industrial,11.02,5,2.5
+TF1500A48K,TF1500,Enclosed PSU,SLPower,Active,False,False,,0,50.4,31.37,48,90,264,"11.02"" x 5.0"" x 2.5""",,1500,1,,3,,-25,60,Industrial,11.02,5,2.5
+TF1500A60K,TF1500,Enclosed PSU,SLPower,Active,False,False,,0,63,25,60,90,264,"11.02"" x 5.0"" x 2.5""",,1500,1,,3,,-25,60,Industrial,11.02,5,2.5
+NPS22-M,NPS20-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4.5,6,8,5,90,264,"4"" x 2""",Analog,40,1,,2,,0,80,Medical,4,2,1
+NPS23-M,NPS20-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,9.6,14.4,3.3,12,90,264,"4"" x 2""",Analog,40,1,,2,,0,80,Medical,4,2,1
+NPS24-M,NPS20-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,12,18,2.7,15,90,264,"4"" x 2""",Analog,40,1,,2,,0,80,Medical,4,2,1
+NPS25-M,NPS20-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,19.2,28.8,1.8,24,90,264,"4"" x 2""",Analog,40,1,,2,,0,80,Medical,4,2,1
+NPS28-M,NPS20-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,38.4,57.6,0.84,48,90,264,"4"" x 2""",Analog,40,1,,2,,0,80,Medical,4,2,1
+DS760SL-3,DS760SL,Front End PSUs AC-input,Artesyn,NotForNewDesigns,False,False,,12,12,62.3,12,90,264,"12.68"" x 2.15""",Analog,760,1,,2,,-5,50,IT Infrastructure,12.68,2.15,1.57
+DS760SL-3-001,DS760SL,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,50,12,90,264,"12.68"" x 2.15""",Analog,760,1,,2,,-5,50,IT Infrastructure,12.68,2.15,1.57
+DS760SL-3-002,DS760SL,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,62.3,12,90,264,"12.68"" x 2.15""",Analog,760,1,,2,,-5,50,IT Infrastructure,12.68,2.15,1.57
+DS760SL-3-003,DS760SL,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,50,12,90,264,"12.68"" x 2.15""",Analog,760,1,,2,,-5,50,IT Infrastructure,12.68,2.15,1.57
+LCM300L-T,LCM300,Enclosed PSU,Artesyn,Active,False,False,,9.6,14.4,25,12,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300L-T-4,LCM300,Enclosed PSU,Artesyn,Active,False,True,,9.6,14.4,25,12,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300N-T,LCM300,Enclosed PSU,Artesyn,Active,False,False,,12,18,20,15,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300N-T-4,LCM300,Enclosed PSU,Artesyn,Active,False,True,,14.25,19.5,20,15,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300Q-T,LCM300,Enclosed PSU,Artesyn,Active,False,False,,19.2,28.8,12.5,24,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300Q-T-4,LCM300,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,14.5,24,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300U-T,LCM300,Enclosed PSU,Artesyn,Active,False,False,,28.8,43.2,8.4,36,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300U-T-4,LCM300,Enclosed PSU,Artesyn,Active,False,True,,28.8,43.2,9.7,36,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300W-T,LCM300,Enclosed PSU,Artesyn,Active,False,False,,38.4,57.6,6.3,48,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM300W-T-4,LCM300,Enclosed PSU,Artesyn,Active,False,True,,43,60,6.3,48,90,264,"7"" x 4""",Analog,300,1,,3,,-40,70,Medical,7,4,1.61
+LCM1000L-T,LCM1000,Enclosed PSU,Artesyn,Active,False,False,,10.8,13.2,83.3,12,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000N-T,LCM1000,Enclosed PSU,Artesyn,Active,False,False,,13.5,16.5,66.7,15,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000Q-T,LCM1000,Enclosed PSU,Artesyn,Active,False,False,,21.6,26.4,41.7,24,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000Q-T-4,LCM1000,Enclosed PSU,Artesyn,Active,False,True,,21.6,26.4,42,24,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000Q-T-8,LCM1000,Enclosed PSU,Artesyn,Active,False,True,,21.6,26.4,42,24,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000U-T,LCM1000,Enclosed PSU,Artesyn,Active,False,False,,32.4,39.6,27.8,36,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1000W-T,LCM1000,Enclosed PSU,Artesyn,Active,False,False,,43.2,52.8,20.8,48,90,264,"10"" x 5""",Analog,1000,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM12K-SHF-N,LCM4000HV,Enclosed PSU,Artesyn,Active,False,False,,100,300,48,250,187,528,"18.86"" x 5.51""",Analog,4000,1,,5,,0,50,Lighting | Horticulture,18.86,5.51,1.59
+LCM12K-SHF-P,LCM4000HV,Enclosed PSU,Artesyn,Active,False,False,,100,300,48,250,187,528,"18.86"" x 5.51""",Analog,4000,1,,5,,0,50,Lighting | Horticulture,18.86,5.51,1.59
+LCM12K-SHF-S,LCM4000HV,Enclosed PSU,Artesyn,Active,False,False,,100,300,48,250,187,528,"18.86"" x 5.51""",Analog,4000,1,,5,,0,50,Lighting | Horticulture,18.86,5.51,1.59
+NGB1200S12K,NGB1200,Enclosed PSU,SLPower,Active,False,False,,11.4,12.6,100,12,85,264,"10.5"" x 3"" x 1.6""",,1200,1,,3,,-10,70,Industrial | Medical,10.5,3,1.6
+NGB1200S24K,NGB1200,Enclosed PSU,SLPower,Active,False,False,,22.8,25.2,50,24,85,264,"10.5"" x 3"" x 1.6""",,1200,1,,3,,-10,70,Industrial | Medical,10.5,3,1.6
+NGB1200S48K,NGB1200,Enclosed PSU,SLPower,Active,False,False,,45.6,50.4,25,48,85,264,"10.5"" x 3"" x 1.6""",,1200,1,,3,,-10,70,Industrial | Medical,10.5,3,1.6
+LCM1500L-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,10.8,13.2,133,12,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500L-T-4,LCM1500,Enclosed PSU,Artesyn,Active,False,True,,10.8,13.2,133,12,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500N-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,13.5,16.5,100,0,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500Q-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,21.6,26.4,67,24,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500Q-T-4,LCM1500,Enclosed PSU,Artesyn,Active,False,True,,21.6,26.4,67,24,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500R-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,25.2,30.8,53,28,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500R-T-4,LCM1500,Enclosed PSU,Artesyn,Active,False,True,,25.2,30.8,53,28,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500U-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,32.4,39.6,43,36,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500U-T-4,LCM1500,Enclosed PSU,Artesyn,Active,False,True,,32.4,39.6,43,36,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500W-T,LCM1500,Enclosed PSU,Artesyn,Active,False,False,,43.2,52.8,33,48,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LCM1500W-T-4,LCM1500,Enclosed PSU,Artesyn,Active,False,True,,43.2,52.8,33,48,90,264,"10"" x 5""",PMBus,1500,1,,3,,-40,70,Industrial | Medical,10,5,2.4
+LGA80D-00DADJJ,LGA80D,,Artesyn,Active,False,False,,0.6,5.2,40,1.8,,,,PMBus,200,2,,2,,,,IT Infrastructure,1,0.5,0.5
+LPT101-M,LPT100-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,2.8,3.63,18,3.3,90,264,"4"" x 2""",Analog,130,3,,2,,0,70,IT Infrastructure | Medical,4,2,1.28
+LPT102-M,LPT100-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4,5.5,18,5,90,264,"4"" x 2""",Analog,130,3,,2,,0,70,IT Infrastructure | Medical,4,2,1.28
+LPT103-M,LPT100-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4,5.5,18,5,90,264,"4"" x 2""",Analog,130,3,,2,,0,70,IT Infrastructure | Medical,4,2,1.28
+LPT104-M,LPT100-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4,5.5,18,5,90,264,"4"" x 2""",Analog,130,3,,2,,0,70,IT Infrastructure | Medical,4,2,1.28
+uMP04,uMP Gen II,Configurable/Modular PSUs,Artesyn,Active,False,False,,,,,,85,264,"10"" x 5""",PMBus,1800,0,,3,,-40,70,Industrial | Medical,10,5,1.57
+uMP09,uMP Gen II,Configurable/Modular PSUs,Artesyn,Active,False,False,,,,,,85,264,"10"" x 5""",PMBus,1800,0,,3,,-40,70,Industrial | Medical,10,5,1.57
+uMP10,uMP Gen II,Configurable/Modular PSUs,Artesyn,Active,False,False,,,,,,85,264,"10"" x 5""",PMBus,1800,0,,3,,-40,70,Industrial | Medical,10,5,1.57
+uMP16,uMP Gen II,Configurable/Modular PSUs,Artesyn,Active,False,False,,,,,,85,264,"10"" x 5""",PMBus,1800,0,,3,,-40,70,Industrial | Medical,10,5,1.57
+GE65E0551F01,GE65E,External Adapters,SLPower,Active,False,False,,5,5,7,5,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E0551N01,GE65E,External Adapters,SLPower,Active,False,False,,5,5,7,5,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E0951F01,GE65E,External Adapters,SLPower,Active,False,False,,9,9,6,9,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E0951N01,GE65E,External Adapters,SLPower,Active,False,False,,9,9,6,9,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1203F01,GE65E,External Adapters,SLPower,Active,False,False,,12,12,5.42,12,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1203N01,GE65E,External Adapters,SLPower,Active,False,False,,12,12,5.42,12,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1503F01,GE65E,External Adapters,SLPower,Active,False,False,,15,15,4.33,15,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1503N01,GE65E,External Adapters,SLPower,Active,False,False,,15,15,4.33,15,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1803F01,GE65E,External Adapters,SLPower,Active,False,False,,18,18,3.61,18,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E1803N01,GE65E,External Adapters,SLPower,Active,False,False,,18,18,3.61,18,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E2403F01,GE65E,External Adapters,SLPower,Active,False,False,,24,24,2.71,24,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E2403N01,GE65E,External Adapters,SLPower,Active,False,False,,24,24,2.71,24,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E4803F01,GE65E,External Adapters,SLPower,Active,False,False,,48,48,1.35,48,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+GE65E4803N01,GE65E,External Adapters,SLPower,Active,False,False,,48,48,1,48,80,264,"4"" x 2.4"" x 1.3""",,65,1,,3,,-20,70,,4,2.4,1.3
+NPS62-M,NPS60-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4,6,11,5,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS63-M,NPS60-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,9.6,14.4,5,12,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS63-M-006,NPS60-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,9.6,14.4,5,12,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS64-M,NPS60-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,12,18,4,15,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS65-M,NPS60-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,19.2,28.8,2.5,24,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+DS1050-3-001-FF,DS1050,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,87,12,90,264,"11"" x 3.2""",PMBus,1050,1,,2,,0,50,Space-Constrained,11,3.2,1.57
+NPS42-M,NPS40-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,4.5,6,11,5,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS43-M,NPS40-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,9.6,14.4,5,12,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS44-M,NPS40-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,12,18,4,15,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS45-M,NPS40-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,19.2,28.8,2.5,24,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+NPS48-M,NPS40-M,Open Frame Low Power PSUs,Artesyn,Active,False,False,,38.4,57.6,1.25,48,90,264,"4"" x 2""",Analog,60,1,,2,,0,80,IT Infrastructure | Medical,4,2,1
+DS1200-3-005,DS1200,Front End PSUs AC-input,Artesyn,Active,False,False,,11.4,12.6,100,12,90,264,"11"" x 3.2""",PMBus,1200,1,,2,,0,50,IT Infrastructure,11,3.2,1.57
+DS1200HE-3,DS1200,Front End PSUs AC-input,Artesyn,Active,False,False,,0,0,100,12,90,264,"11"" x 3.2""",PMBus,1200,2,,2,,0,50,IT Infrastructure,11,3.2,1.57
+DS1200HE-3-002,DS1200,Front End PSUs AC-input,Artesyn,Active,False,False,,0,0,100,12,90,264,"11"" x 3.2""",PMBus,1200,2,,2,,0,50,IT Infrastructure,11,3.2,1.57
+DS1200DC-3,DS1200DC,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,100,12,-72,-40,"11"" x 3.2""",Analog,1200,1,,2,,0,50,Industrial,11,3.2,1.57
+DS1200DC-3-004,DS1200DC,Front End PSUs AC-input,Artesyn,Active,False,False,,12,12,100,12,-72,-40,"11"" x 3.2""",Analog,1200,1,,2,,0,50,Industrial,11,3.2,1.57
+DS1100SDC-3,DS1100SDC,Front End PSUs DC-input,Artesyn,Active,False,False,,11.4,12.6,91.76,12,-72,-36,"7.74"" x 3.4""",PMBus,1100,2,,2,,0,50,Medical,7.74,3.4,1.58
+DS1100SDC-3-001,DS1100SDC,Front End PSUs DC-input,Artesyn,Active,False,False,,11.4,12.6,91.76,12,-72,-36,"7.74"" x 3.4""",PMBus,1100,2,,2,,0,50,Medical,7.74,3.4,1.58
+LCM600L,LCM600,Enclosed PSU,Artesyn,Active,False,False,,9.6,14.4,54,12,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600L-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,9.6,14.4,52,12,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600L-T,LCM600,Enclosed PSU,Artesyn,Active,False,False,,9.6,14.4,54,12,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600N,LCM600,Enclosed PSU,Artesyn,Active,False,False,,12,19.5,44,15,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600N-T,LCM600,Enclosed PSU,Artesyn,Active,False,False,,0,0,0,0,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600N-T-4-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,14.25,19.5,44,15,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q,LCM600,Enclosed PSU,Artesyn,Active,False,False,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-N,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-T,LCM600,Enclosed PSU,Artesyn,Active,False,False,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-T-4-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-T-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-T-N,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600Q-T-N-4,LCM600,Enclosed PSU,Artesyn,Active,False,True,,19.2,28.8,27,24,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600U,LCM600,Enclosed PSU,Artesyn,Active,False,False,,28.8,43.2,16.7,36,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600U-T,LCM600,Enclosed PSU,Artesyn,Active,False,False,,28.8,43.2,16.7,36,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600U-T-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,28.8,43.2,16.7,36,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600W,LCM600,Enclosed PSU,Artesyn,Active,False,False,,38.4,57.6,14,48,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600W-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,38.4,57.6,14,48,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600W-T,LCM600,Enclosed PSU,Artesyn,Active,False,False,,38.4,57.6,14,48,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600W-T-4-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,38.4,57.6,14,48,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+LCM600W-T-A,LCM600,Enclosed PSU,Artesyn,Active,False,True,,38.4,57.6,14,48,90,264,"7.5"" x 4.5""",Analog,600,1,,3,,-40,70,Medical,7.5,4.5,2.4
+GE150A1251F01,GE150,External Adapters,SLPower,Active,False,False,,12,12,12.1,12,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A1251N01,GE150,External Adapters,SLPower,Active,False,False,,12,12,12.5,12,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A1551F01,GE150,External Adapters,SLPower,Active,False,False,,15,15,9.67,15,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A1551N01,GE150,External Adapters,SLPower,Active,False,False,,15,15,10,15,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A1851F01,GE150,External Adapters,SLPower,Active,False,False,,18,18,8.33,18,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A1851N01,GE150,External Adapters,SLPower,Active,False,False,,18,18,8.33,18,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A2451F01,GE150,External Adapters,SLPower,Active,False,False,,24,24,6.25,24,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A2451N01,GE150,External Adapters,SLPower,Active,False,False,,24,24,6.25,24,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A4851F01,GE150,External Adapters,SLPower,Active,False,False,,48,48,3.13,48,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+GE150A4851N01,GE150,External Adapters,SLPower,Active,False,False,,48,48,3.2,48,85,264,"6.5"" x 2.83"" x 1.46""",,150,1,,3,,-20,50,Medical,6.5,2.83,1.46
+DS500SDC-3,DS500SDC,Front End PSUs DC-input,Artesyn,Active,False,False,,0,0,41.67,12,-72,-36,"7.74"" x 3.4""",Analog,500,2,,2,,0,50,Industrial,7.74,3.4,1.58
+DS500SDC-3-001,DS500SDC,Front End PSUs DC-input,Artesyn,Active,False,False,,0,0,41.67,12,-72,-36,"7.74"" x 3.4""",Analog,500,2,,2,,0,50,Industrial,7.74,3.4,1.58
+DS1100TDC-3,DS1100TDC,Front End PSUs AC-input,Artesyn,Active,False,False,,11.4,12.6,90,12,-72,-40,"12.64"" x 2.145""",Analog,1100,2,,2,,0,65,Space-Constrained,12.64,2.145,1.575
+DS1100TDC-3-001,DS1100TDC,Front End PSUs AC-input,Artesyn,Active,False,False,,11.4,12.6,90,12,-72,-40,"12.64"" x 2.145""",Analog,1100,2,,2,,0,65,Space-Constrained,12.64,2.145,1.575
+TF800A12K,TF800,Enclosed PSU,SLPower,Active,False,False,,0,12.6,66.7,12,90,264,"9.80"" x 5.0"" x 1.6""",,800,1,,3,,-25,60,Industrial,9.8,5,1.6
+TF800A15K,TF800,Enclosed PSU,SLPower,Active,False,False,,0,15.75,53.4,15,90,264,"9.80"" x 5.0"" x 1.6""",,800,1,,3,,-25,60,Industrial,9.8,5,1.6
+TF800A24K,TF800,Enclosed PSU,SLPower,Active,False,False,,0,25.2,33.5,24,90,264,"9.80"" x 5.0"" x 1.6""",,800,1,,3,,-25,60,Industrial,9.8,5,1.6
+TF800A48K,TF800,Enclosed PSU,SLPower,Active,False,False,,0,50.4,16.7,48,90,264,"9.80"" x 5.0"" x 1.6""",,800,1,,3,,-25,60,Industrial,9.8,5,1.6
+TF800A60K,TF800,Enclosed PSU,SLPower,Active,False,False,,0,63,13.4,60,90,264,"9.80"" x 5.0"" x 1.6""",,800,1,,3,,-25,60,Industrial,9.8,5,1.6
+FCM10KW-N-P,Evergreen Vento FCM Series,Enclosed PSU,Artesyn,Active,True,False,95.5,48,60,183,54.5,180,528,"18.11"" x 4.95"" X 3.21""",,10000,,,5,,-40,50,Industrial,18.11,4.95,3.21
+FCM10KW-N-T,Evergreen Vento FCM Series,Enclosed PSU,Artesyn,Active,True,False,95.5,48,60,183,54.5,180,528,"18.11"" x 4.95"" X 3.21""",,10000,,,5,,-40,50,Industrial,18.11,4.95,3.21
+TF3000A12K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,12.6,200,12,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A150K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,157.5,20,150,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A15K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,15.75,160,15,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A200K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,210,15,200,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A24K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,25.2,125,24,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A250K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,212.5,12,250,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A300K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,315,10,300,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A400K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,420,7.5,400,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A48K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,50.4,62.5,48,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+TF3000A60K,TF3000,Enclosed PSU,SLPower,Active,False,False,,0,63,50,60,90,264,"11.02"" x 6.7"" x 2.5""",,3000,1,,3,,-25,60,Industrial,11.02,6.7,2.5
+GE30D0502F01,GE30D,External Adapters,SLPower,Active,False,False,,5,5,2.4,5,90,264,"6"" x 4"" x 1.6""",,24,2,,3,,20,40,Medical,6,4,1.6
