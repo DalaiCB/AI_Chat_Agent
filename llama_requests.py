@@ -2,6 +2,8 @@ from langchain.prompts import ChatPromptTemplate
 from icecream import ic
 import requests
 
+from process_llama_response import process
+
 
 API_URL = "https://bo1zekebo4gy1v0e.us-east-1.aws.endpoints.huggingface.cloud"
 HEADERS = {
@@ -14,6 +16,8 @@ CHROMA_PATH = "chroma_test"
 PROMPT_TEMPLATE = """
 {context}\n\n
 Based on the this information, provide a short and precise answer for the following question: {question}
+
+Note: Please add "~~~" at the end of each answer.
 
 Assistant:
 """
@@ -73,7 +77,8 @@ def send_request(user_query, datasheet_content):
 
 def llama(user_query, datasheet_content):
     response = send_request(user_query, datasheet_content)
-    return response
+    
+    return process(response)
 
 
 if __name__ == "__main__":
