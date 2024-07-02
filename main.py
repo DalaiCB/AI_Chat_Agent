@@ -4,9 +4,10 @@ import os
 import csv
 
 from llama_requests import llama
-from extract_product_name import extract_product_names
+from gpt_extract_name import name_extracter
 from query_interpreter import query_interpretation
 from product_rec import search_products
+from get_name import search_product_files
 
 
 # Class to manage user sessions and save product names
@@ -91,8 +92,13 @@ def process_raw_query(raw_query):
 
 # Function to get the file path for the datasheet of a product
 def datasheet_file_path(product_name):
-    datasheets_dir = "data"
-    return os.path.join(datasheets_dir, str(product_name) + ".md")
+    datasheets_dir = "data/test_md"
+    
+    matching_files = search_product_files(product_name)
+
+    md_file = matching_files[0]
+
+    return os.path.join(datasheets_dir, md_file)
 
 
 # Function to read the datasheet content from a file
@@ -104,6 +110,7 @@ def read_datasheet_from_file(product_name):
             datasheet_content = file.read()
             return datasheet_content
     else:
+        print("\n\nDatasheet not found for", product_name, "\n\n")
         return f"Datasheet not found for {product_name}."
 
 
@@ -119,16 +126,17 @@ def get_datasheets(extracted_product_names):
             combined_datasheet_content += separator
         
         combined_datasheet_content += datasheet_content
-    
+
     return combined_datasheet_content
 
 
 # Function to search for the product name in the user query and retrieve the datasheet content
 def search(user_query, session_id):
     # Extract the product name from the user query
-    extracted_product_names = extract_product_names(user_query)
-    print("\nExtracted product Name:", extracted_product_names)
+    extracted_product_names, multiple_products = name_extracter(user_query)
     
+    ic(multiple_products)
+
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
     
@@ -152,25 +160,29 @@ def search(user_query, session_id):
         multiple_product_names = " ~~ ".join(extracted_product_names)
         SessionManager().save_session(session_id, multiple_product_names)
 
-    return llama(user_query, get_datasheets(extracted_product_names))
+    return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
 
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
+    log_line = "----------------------------------------------------"
 
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
+    user_query_interp = query_interpretation(user_query)
     
     # Check if the user query is a product recommendation query
     try:
-        if query_interpretation(user_query) == "Product recommendation":
+        if user_query_interp == "Product recommendation":
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
             
+            print(f"\n\n{log_line}\n{log_line}")
             print("\n\t\tUser Query:\n", user_query)
+            print(f"\nInterpretation: {user_query_interp}")
             print("\n\t\tAgent Response:\n", recommended_products)
             
             return recommended_products
@@ -181,14 +193,19 @@ def main(raw_user_query, session_id):
 
     # Regular search for product information
     try:
-        agent_response = search(user_query, session_id)
+        agent_response, extracted_product_names = search(user_query, session_id)
     except Exception as e:
         print("\n\t\tError: General search failed.\n", e)
         
         return ERROR_MESSAGE
     
+    # LOGS
+    print(f"\n\n{log_line}\n\t\tLOG\n{log_line}")
     print("\n\t\tUser Query:\n", user_query)
+    print(f"\nInterpretation: {user_query_interp}")
+    print("Extracted product Name:", extracted_product_names)
     print("\n\t\tAgent Response:\n", agent_response)
+    print(f"\n\n{log_line}\n\t\tLOG\n{log_line}\n")
     
     return agent_response
 
