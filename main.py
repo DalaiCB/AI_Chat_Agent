@@ -8,6 +8,7 @@ from gpt_extract_name import name_extracter
 from query_interpreter import query_interpretation
 from product_rec import search_products
 from get_name import search_product_files
+from general_llama import general_request
 
 
 # Class to manage user sessions and save product names
@@ -174,6 +175,9 @@ def main(raw_user_query, session_id):
     
     # Check if the user query is a product recommendation query
     try:
+        if user_query_interp == "Llama":
+            return general_request(user_query)
+        
         if user_query_interp == "Product recommendation":
             recommended_products = search_products(user_query, disable_print=True)
             
