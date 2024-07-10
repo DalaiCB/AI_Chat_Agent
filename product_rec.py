@@ -301,7 +301,10 @@ def search_products(user_query, disable_print):
         if "Application" in unique_columns:
             unique_columns.remove("Application")
 
-        return filtered_df[unique_columns]
+        # Limit the output to the first 5 rows
+        limited_df = filtered_df[unique_columns].head(5)
+
+        return limited_df
     except Exception as e:
         ic("Error - search_products:", e)
         traceback.print_exc()
