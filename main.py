@@ -191,7 +191,7 @@ def main(raw_user_query, session_id):
             
             return recommended_products
     except Exception as e:
-        print("\n\t\tError: Product recommendation failed.\n", e)
+        ic("\n\t\tError: Product recommendation failed.\n", e)
         
         return ERROR_MESSAGE
 
@@ -199,7 +199,7 @@ def main(raw_user_query, session_id):
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
     except Exception as e:
-        print("\n\t\tError: General search failed.\n", e)
+        ic("\n\t\tError: General search failed.\n", e)
         
         return ERROR_MESSAGE
     
