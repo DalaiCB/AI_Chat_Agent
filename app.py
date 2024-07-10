@@ -2,9 +2,9 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 from icecream import ic
 import streamlit as st
 import pandas as pd
-import os
 
 from main import main
+from text_from_dataframe import generate_text_from_dataframe
 
 
 # Function to load URL from a file
@@ -79,25 +79,26 @@ def run_app():
 
         # If response is a DataFrame, add URLs and create hyperlinks
         if isinstance(response_text, pd.DataFrame):
+            summary = generate_text_from_dataframe(response_text, prompt)
+            summary_html = format_message(summary)
+            
             response_text = add_urls_and_create_hyperlinks(response_text, urls)
+            response_text_html = dataframe_to_html(response_text.drop(columns=['Page URL', 'Datasheet URL']))
+            
+            combined_message = f"{summary_html}\n\n{response_text_html}"
 
-        # Append the prompt and response to the chat history
-        st.session_state.history.append((prompt, response_text))
+            st.session_state.history.append((prompt, combined_message))
+        else:
+            st.session_state.history.append((prompt, format_message(response_text)))
 
     # Display the chat history
     for message, response in st.session_state.history:
         st.chat_message("user").markdown(format_message(message), unsafe_allow_html=True)
         
-        if isinstance(response, pd.DataFrame):
-            # Reset the index to remove the row numbers
-            response = response.reset_index(drop=True)
-            
-            # Convert the DataFrame to an HTML table and display it
-            html_table = dataframe_to_html(response.drop(columns=['Page URL', 'Datasheet URL']))
-            st.markdown(html_table, unsafe_allow_html=True)
-        else:
-            if response is not None:
-                st.chat_message("bot").markdown(format_message(response), unsafe_allow_html=True)
+        if isinstance(response, str):  # Check if response is a string
+            st.chat_message("bot").markdown(response, unsafe_allow_html=True)
+        else:  # Assuming response is HTML if not a string (DataFrame case)
+            st.markdown(response, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
