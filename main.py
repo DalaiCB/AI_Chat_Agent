@@ -172,6 +172,8 @@ def main(raw_user_query, session_id):
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
+
+    ic(user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
