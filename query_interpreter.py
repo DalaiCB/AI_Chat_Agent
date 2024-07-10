@@ -23,7 +23,9 @@ def query_interpretation(query):
         - None: "What is the output current of LCM300 series?"
         - None: "What is the operating temperature of LGA80D?"
         - None: "How efficient is the NGB1200?"
-        - Llama: "I am designing the lighting for a 1000 squarefoot warehouse. I'll be using energy efficient LEDs. How much power will I need?"
+        - Llama: "How much power will I need?"
+        - Llama: "What are my power requirements?"
+        - Llama: "Can you help me figure out how much power I need?"
     
     Interpret the query: {}
     """
