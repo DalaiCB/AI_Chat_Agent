@@ -15,7 +15,7 @@ Based on the search results, answer the user query.
 User query: {user_query}
 Search results: {dataframe_results}
 
-Note: Please add "~~~" at the end of your answer. You shouldn't use lists or bullet points in your response as the table will be provided to the user.
+Note: Please add "~~~" at the end of your answer. You shouldn't use lists or bullet points in your response as the table will be provided to the user. Also, this will be sent to the user so refer to the user as 'you' and not 'user'.
 
 Assistant:
 """
