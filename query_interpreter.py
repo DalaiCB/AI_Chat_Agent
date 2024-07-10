@@ -41,7 +41,13 @@ def query_interpretation(query):
     
     message_content = response.choices[0].message.content.strip()
 
-    return message_content
+    valid_responses = ["Product recommendation", "None", "Llama"]
+    for valid_response in valid_responses:
+        if message_content.startswith(valid_response):
+            return valid_response
+
+    # Default to "None" if no valid response is detected
+    return "None"
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
