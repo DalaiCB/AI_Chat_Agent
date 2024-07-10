@@ -14,7 +14,7 @@ def query_interpretation(query):
 
     1. Product recommendation: If the query pertains to finding or recommending a product based on specific criteria, respond with "Product recommendation".
     2. None: If the query does not involve seeking a product recommendation, respond with "None".
-    3. Llama: For all other general type of queries, respond with "Llama".
+    3. Llama: If the query does not pertain to specific product recommendation but involves some other type of inquiry that doesn't directly relate to a specific product, respond with "Llama".
 
     Examples of expected responses based on the queries are as follows:
         - Product recommendation: "I need a product with output current of 62.3 amps."
