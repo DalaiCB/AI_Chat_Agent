@@ -179,7 +179,7 @@ def main(raw_user_query, session_id):
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-
+        ic(list_models_only)
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
