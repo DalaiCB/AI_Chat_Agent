@@ -178,19 +178,19 @@ def main(raw_user_query, session_id):
     
     # Check if the user query is a product recommendation query
     try:
+        list_models_only = list_models_check(user_query)
+
+        if list_models_only:
+            series_name, multiple_products = name_extracter(user_query)
+            models = show_models(series_name)
+            model_list = ', '.join(models)
+
+            return f"All the models for {series_name} are {model_list}."
+        
         if user_query_interp == "Llama":
             return general_request(user_query)
         
-        if user_query_interp == "Product recommendation":
-            list_models_only = list_models_check(user_query)
-
-            if list_models_only:
-                series_name, multiple_products = name_extracter(user_query)
-                models = show_models(series_name)
-                model_list = ', '.join(models)
-
-                return f"All the models for {series_name} are {model_list}."
-            
+        if user_query_interp == "Product recommendation":            
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
