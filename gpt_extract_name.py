@@ -12,8 +12,9 @@ def name_extracter(user_query):
     If the query contains more than one product name, provide all the names separated by double tilde '~~'.
     Some product names may contain '-', '/', or other special characters. Please include them as well.
     If no product name is found, return None.
-
+    
     Special Instructions: If the query contains Evergreen Vento or something similar, please return FCM10K as it is the same product.
+    Don't return any words like "series". For example, for LCM300 series, just return "LCM300" and leave out the word series.
     """
 
     prompt = f"Query: {user_query}"
