@@ -42,14 +42,18 @@ def list_models_check(user_query):
     else:
         return False
 
+def normalize_string(s):
+    return re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+
 def show_models(series_name):
     df = pd.read_csv('data/3.csv')
     
     try:
-        series_name_lower = series_name.lower()
-        df['SeriesName_lower'] = df.iloc[:, 1].str.lower()
+        normalized_series_name = normalize_string(series_name)
         
-        matching_rows = df[df['SeriesName_lower'].str.contains(series_name_lower)]
+        df['Normalized_SeriesName'] = df.iloc[:, 1].astype(str).apply(normalize_string)
+    
+        matching_rows = df[df['Normalized_SeriesName'] == normalized_series_name]
     except Exception as e:
         return [f"show_model error: {e}"]
 
