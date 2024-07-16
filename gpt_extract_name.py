@@ -15,6 +15,7 @@ def name_extracter(user_query):
     
     Special Instructions: If the query contains Evergreen Vento or something similar, please return FCM10K as it is the same product.
     Don't return any words like "series". For example, for LCM300 series, just return "LCM300" and leave out the word series.
+    The product name should be in all caps. For example, lga80d should be returned as "LGA80D".
     """
 
     prompt = f"Query: {user_query}"
