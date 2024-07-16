@@ -185,7 +185,9 @@ def main(raw_user_query, session_id):
             models = show_models(series_name)
             model_list = ', '.join(models)
 
-            ic(return f"All the models for {series_name} are {model_list}.")
+            final_model_list = f"All the models for {series_name} are {model_list}."
+            
+            return 
         
         if user_query_interp == "Llama":
             return general_request(user_query)
