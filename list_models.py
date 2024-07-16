@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from icecream import ic
 from openai import OpenAI
 
 def list_models_check(user_query):
