@@ -180,7 +180,7 @@ def main(raw_user_query, session_id):
         models = show_models(series_name)
         model_list = ', '.join(models)
 
-         return f"All the models for {series_name} are {model_list}."
+        return f"All the models for {series_name} are {model_list}."
     
     user_query_interp = query_interpretation(user_query)
 
