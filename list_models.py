@@ -44,8 +44,11 @@ def list_models_check(user_query):
 def show_models(series_name):
     df = pd.read_csv('data/3.csv')
 
-    matching_rows = df[df.iloc[:, 1] == series_name]
-
+    try:
+        matching_rows = df[df.iloc[:, 1] == series_name]
+    except Exception as e:
+        return [f"show_model error: {e}"]
+    
     return matching_rows.iloc[:, 0].tolist()
 
 if __name__ == "__main__":
