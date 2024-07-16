@@ -9,6 +9,7 @@ from query_interpreter import query_interpretation
 from product_rec import search_products
 from get_name import search_product_files
 from general_llama import general_request
+from list_models import list_models_check, show_models
 
 
 # Class to manage user sessions and save product names
@@ -181,6 +182,15 @@ def main(raw_user_query, session_id):
             return general_request(user_query)
         
         if user_query_interp == "Product recommendation":
+            list_models_only = list_models_check(user_query)
+
+            if list_models_only:
+                series_name, multiple_products = name_extracter(user_query)
+                models = show_models(series_name)
+                model_list = ', '.join(models)
+
+                return f"All the models for {series_name} are {model_list}."
+            
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
