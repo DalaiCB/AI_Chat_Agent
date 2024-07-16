@@ -46,7 +46,10 @@ def show_models(series_name):
     df = pd.read_csv('data/3.csv')
     
     try:
-        matching_rows = df[df.iloc[:, 1] == series_name]
+        series_name_lower = series_name.lower()
+        df['SeriesName_lower'] = df.iloc[:, 1].str.lower()
+        
+        matching_rows = df[df['SeriesName_lower'].str.contains(series_name_lower)]
     except Exception as e:
         return [f"show_model error: {e}"]
 
