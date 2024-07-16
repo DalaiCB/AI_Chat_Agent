@@ -46,6 +46,7 @@ def show_models(series_name):
     df = pd.read_csv('data/3.csv')
 
     ic("THE SERIES NAME:", series_name)
+    ic(type(series_name))
     
     try:
         matching_rows = df[df.iloc[:, 1] == series_name]
