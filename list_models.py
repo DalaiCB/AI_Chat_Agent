@@ -56,7 +56,8 @@ def show_models(series_name):
     
         matching_rows = df[df['Normalized_SeriesName'] == normalized_series_name]
     except Exception as e:
-        return [f"show_model error: {e}"]
+        ic(f"show_model error: {e}")
+        return []
 
     ic("Series name:", series_name)
     ic(matching_rows)
