@@ -172,23 +172,22 @@ def main(raw_user_query, session_id):
 
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
+
+    list_models_only = list_models_check(user_query)
+    ic(list_models_only)
+    if list_models_only:
+        series_name, multiple_products = name_extracter(user_query)
+        models = show_models(series_name)
+        model_list = ', '.join(models)
+
+         return f"All the models for {series_name} are {model_list}."
+    
     user_query_interp = query_interpretation(user_query)
 
     ic(user_query_interp)
     
     # Check if the user query is a product recommendation query
-    try:
-        list_models_only = list_models_check(user_query)
-        ic(list_models_only)
-        if list_models_only:
-            series_name, multiple_products = name_extracter(user_query)
-            models = show_models(series_name)
-            model_list = ', '.join(models)
-
-            final_model_list = f"All the models for {series_name} are {model_list}."
-            ic(final_model_list)
-            return final_model_list
-        
+    try:        
         if user_query_interp == "Llama":
             return general_request(user_query)
         
