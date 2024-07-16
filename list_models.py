@@ -46,10 +46,10 @@ def show_models(series_name):
     df = pd.read_csv('data/3.csv')
 
     ic("THE SERIES NAME:", series_name)
-    ic(type(series_name))
+    ic(type(str(series_name)))
     
     try:
-        matching_rows = df[df.iloc[:, 1] == series_name]
+        matching_rows = df[df.iloc[:, 1] == str(series_name)]
     except Exception as e:
         return [f"show_model error: {e}"]
     
