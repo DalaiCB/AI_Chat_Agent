@@ -177,7 +177,10 @@ def main(raw_user_query, session_id):
     ic(list_models_only)
     if list_models_only:
         series_name, multiple_products = name_extracter(user_query)
-        models = show_models(series_name)
+
+        series_name_str = str(series_name[0])
+        
+        models = show_models(series_name_str)
         model_list = ', '.join(models)
 
         return f"All the models for {series_name} are {model_list}."
