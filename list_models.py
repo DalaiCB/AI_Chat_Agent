@@ -49,7 +49,7 @@ def normalize_string(s):
     return re.sub(r'[^a-zA-Z0-9]', '', s).lower()
 
 def show_models(series_name):
-    df = pd.read_csv('data/3.csv')
+    df = pd.read_csv('data/2.csv')
     
     try:
         normalized_series_name = normalize_string(series_name)
