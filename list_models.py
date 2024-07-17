@@ -24,6 +24,7 @@ def list_models_check(user_query):
     3. "What is the output current of LCM300?"
     4. "What is LCM300?"
     5. "What is LGA80D?"
+    6. "What is LCM 1000?"
 
     User Query: {}
     Assistant:
