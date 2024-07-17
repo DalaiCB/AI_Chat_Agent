@@ -22,6 +22,8 @@ def list_models_check(user_query):
     1. "What is the warranty period for NGB60?"
     2. "How efficient is the LGA80D?"
     3. "What is the output current of LCM300?"
+    4. "What is LCM300?"
+    5. "What is LGA80D?"
 
     User Query: {}
     Assistant:
