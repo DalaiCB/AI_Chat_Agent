@@ -122,7 +122,7 @@ def search_products(user_query, disable_print):
     column_names, search_values = process_user_query(user_query)
     
     # Load product recommendation data
-    df = pd.read_csv('data/3.csv')
+    df = pd.read_csv('data/2.csv')
 
     # Initialize lists to store conditions and column names to print
     conditions = []
