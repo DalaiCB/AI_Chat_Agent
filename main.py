@@ -88,6 +88,7 @@ class SessionManager:
 
 # Function to process the raw query text
 def process_raw_query(raw_query):
+    raw_query = raw_query.replace('"', '\\"')
     # Split the string into words and remove any empty
     words = raw_query.split()
     # Join the words back together with a single space between them
