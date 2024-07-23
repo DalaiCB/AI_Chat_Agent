@@ -1,5 +1,6 @@
 from icecream import ic
 from langchain.prompts import ChatPromptTemplate
+from openai import OpenAI
 import os
 import csv
 
@@ -10,6 +11,8 @@ from product_rec import search_products
 from get_name import search_product_files
 from general_llama import general_request
 from list_models import list_models_check, show_models
+from openai_api import openai_call
+from special_product_search import search_special_product
 
 
 # Class to manage user sessions and save product names
@@ -145,7 +148,8 @@ def search(user_query, session_id):
     # If product name is not found, use last product name saved in memory.
     if extracted_product_names is None:
         if name_in_memory is None:
-            return "Product name not found in query."
+            ic()
+            return "Product name not found in query.", ''
         else:
             extracted_product_names = []
 
@@ -165,6 +169,7 @@ def search(user_query, session_id):
     return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
 
+
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
@@ -172,47 +177,52 @@ def main(raw_user_query, session_id):
 
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
-
-    list_models_only = list_models_check(user_query)
-    ic(list_models_only)
-    if list_models_only:
-        series_name, multiple_products = name_extracter(user_query)
-
-        series_name_str = str(series_name[0])
-        
-        models = show_models(series_name_str)
-        model_list = ', '.join(models)
-
-        if model_list:
-            return f"All the models for {series_name_str} are {model_list}."
-        else:
-            return f"Models for {series_name_str} was not found."
-        
-        
-    
     user_query_interp = query_interpretation(user_query)
-
-    ic(user_query_interp)
     
     # Check if the user query is a product recommendation query
-    try:        
+    try:
+        list_models_only = list_models_check(user_query)
+    
+        if list_models_only:
+            series_name, multiple_products = name_extracter(user_query)
+            models = show_models(series_name)
+            model_list = ', '.join(models)
+
+            return f"All the models for {series_name} are {model_list}."
+        
         if user_query_interp == "Llama":
             return general_request(user_query)
-        
+
         if user_query_interp == "Product recommendation":            
+            special_case_prompt = (
+                    f"User query: \"{user_query}\"\n\n"
+                    f"Based on the user query, determine if the query is related to solar photovoltaics or automotive products. If the query is related to solar photovoltaics or automotive, return True. Otherwise, return False. Only respond with 'True' or 'False'."
+                )
+            openai_response = openai_call(special_case_prompt)
+            special_case = eval(openai_response)
+
+            try:
+                if special_case:
+                    return search_special_product(user_query)
+            except Exception as e:
+                print("\n\t\tError: Special product search failed.\n", e)
+                
+                return ERROR_MESSAGE
+
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
             
-            print(f"\n\n{log_line}\n{log_line}")
-            print("\n\t\tUser Query:\n", user_query)
-            print(f"\nInterpretation: {user_query_interp}")
-            print("\n\t\tAgent Response:\n", recommended_products)
-            
             return recommended_products
+        
+        print(f"\n\n{log_line}\n{log_line}")
+        print("\n\t\tUser Query:\n", user_query)
+        print(f"\nInterpretation: {user_query_interp}")
+        print("\n\t\tAgent Response:\n", recommended_products)
+
     except Exception as e:
-        ic("\n\t\tError: Product recommendation failed.\n", e)
+        print("\n\t\tError: Product recommendation failed.\n", e)
         
         return ERROR_MESSAGE
 
@@ -220,7 +230,7 @@ def main(raw_user_query, session_id):
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
     except Exception as e:
-        ic("\n\t\tError: General search failed.\n", e)
+        print("\n\t\tError: General search failed.\n", e)
         
         return ERROR_MESSAGE
     
@@ -236,7 +246,7 @@ def main(raw_user_query, session_id):
 
 
 if __name__ == "__main__":
-    user_query = "What is the efficiency?"
+    user_query = "For my solar panel plant, I need to be able to to measure the temprature in my Thin Film Deposition machine. What do I need for that? What product would you recommend?"
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     
     print("\n\t\tAgent Response:\n", main(user_query, session_id))
