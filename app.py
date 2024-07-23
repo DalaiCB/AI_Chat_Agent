@@ -46,6 +46,8 @@ def format_message(message):
     # Replace newline characters with HTML line breaks
     message = message.replace('\n', '<br>')
     message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+
+    return message
     
 
 def clear_sessions_file():
