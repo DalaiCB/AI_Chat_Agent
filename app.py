@@ -41,9 +41,12 @@ def dataframe_to_html(df):
 
 
 def format_message(message):
-    # Replace newline characters with HTML line breaks
-    message = message.replace('\n', '<br>')
-    message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+    try:
+        # Replace newline characters with HTML line breaks
+        message = message.replace('\n', '<br>')
+        message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+    except Exception as e:
+        ic(e)
     return message
 
 
