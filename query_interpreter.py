@@ -20,6 +20,7 @@ def query_interpretation(query):
         - Product recommendation: "I need a product with output current of 62.3 amps."
         - Product recommendation: "What products can output over 50A?"
         - Product recommendation: "I'm looking for a 1000W power supply with at least 2 years warranty."
+        - Product recommendation: "Do you have any units that will meet that power requirement?"
         - None: "What is the output current of LCM300 series?"
         - None: "What is the operating temperature of LGA80D?"
         - None: "How efficient is the NGB1200?"
