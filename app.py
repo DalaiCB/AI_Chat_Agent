@@ -46,6 +46,7 @@ def format_message(message):
         message = message.replace('\n', '<br>')
         message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
     except Exception as e:
+        ic()
         ic(e)
     return message
 
