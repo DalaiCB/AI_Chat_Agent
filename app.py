@@ -41,15 +41,10 @@ def dataframe_to_html(df):
 
 
 def format_message(message):
-    try:
-        # Replace newline characters with HTML line breaks
-        message = message.replace('\n', '<br>')
-        message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
-    except Exception as e:
-        ic()
-        ic(e)
-    return message
-
+    # Replace newline characters with HTML line breaks
+    message = message.replace('\n', '<br>')
+    message = message.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+    
 
 def clear_sessions_file():
     with open('sessions.txt', 'w') as f:
