@@ -216,17 +216,12 @@ def main(raw_user_query, session_id):
                 recommended_products = "No products found for the specified criteria."
             
             return recommended_products
-        
-        print(f"\n\n{log_line}\n{log_line}")
-        print("\n\t\tUser Query:\n", user_query)
-        print(f"\nInterpretation: {user_query_interp}")
-        print("\n\t\tAgent Response:\n", recommended_products)
 
     except Exception as e:
         print("\n\t\tError: Product recommendation failed.\n", e)
         
         return ERROR_MESSAGE
-
+    
     # Regular search for product information
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
