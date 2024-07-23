@@ -179,6 +179,9 @@ def main(raw_user_query, session_id):
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
+
+    print("\n\t\tUser Query:\n", user_query)
+    print(f"\nInterpretation: {user_query_interp}")
     
     # Check if the user query is a product recommendation query
     try:
@@ -188,7 +191,7 @@ def main(raw_user_query, session_id):
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
-
+            
             return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
@@ -232,8 +235,6 @@ def main(raw_user_query, session_id):
     
     # LOGS
     print(f"\n\n{log_line}\n\t\tLOG\n{log_line}")
-    print("\n\t\tUser Query:\n", user_query)
-    print(f"\nInterpretation: {user_query_interp}")
     print("Extracted product Name:", extracted_product_names)
     print("\n\t\tAgent Response:\n", agent_response)
     print(f"\n\n{log_line}\n\t\tLOG\n{log_line}\n")
