@@ -1,0 +1,287 @@
+{
+    "solar photovoltaics": [
+        {
+            "name": "Ascent AP Pulsed and DC Power System",
+            "type": "Pulsed and DC Power Systems",
+            "features": [
+                "Process customization with extensive power delivery parameters",
+                "Advanced process management through a tiered approach to arc mitigation",
+                "Compact, single-unit solution (up to 30 kW)",
+                "Set Point Compensation™ technology for stable throughput",
+                "Wide operational range to enable a variety of process materials",
+                "Compatible with PowerInsight by Advanced Energy"
+            ],
+            "benefits": [
+                "Precise sputtering of dielectric and conductive films",
+                "Expanded process control, flexibility, and innovation",
+                "High film quality and throughput",
+                "Repeatable, customizable films",
+                "Higher power levels with reduced arc damage",
+                "Easy integration and control"
+            ]
+        },
+        {
+            "name": "Ascent AMS II Pulsed and DC Power System",
+            "type": "Pulsed and DC Power Systems",
+            "features": [
+                "Water cooling",
+                "Modular and scalable",
+                "Embedded PowerInsight by Advanced Energy™ IoT intelligence",
+                "Wide mains voltage range",
+                "Expanded operating range",
+                "Arc Management System™ (AMS) technology — customer pre-sets for metal and ceramic targets",
+                "Set Point Compensation™ technology",
+                "Arc-Sync™ technology — primary/secondary up to 12 units",
+                "Ethernet, EtherCAT®, Profibus, RS-232/485, Ethernet/IP, and analog communications"
+            ],
+            "benefits": [
+                "High film quality and throughput",
+                "Reduced film, substrate, and equipment damage",
+                "Stable throughput and power delivery",
+                "Easy integration and control",
+                "Fast scaling to achieve high power levels"
+            ]         
+        },
+        {
+            "name": "Ascent DMS Pulsed and DC Power System",
+            "type": "Pulsed and DC Power Systems",
+            "features": [
+                "Modular and scalable (40, 60, and 120 kW models configurable up to 180 kW)",
+                "Selectable frequency (500 Hz to 50 kHz)",
+                "Adjustable duty cycle — independent power ratio regulation for each magnetron",
+                "Advanced process management through a tiered approach to arc mitigation",
+                "CEX (phase synchronization)"
+            ],
+            "benefits": [
+                "Increased film value: Repeatable, customizable deposited films",
+                "Lower cost of ownership and increased productivity",
+                "Higher power levels with improved stability and reduced arc damage",
+                "Easy scalability, integration, and support",
+                "Modular design allows you to pay for only what you need while enabling future capability expansion"
+            ]         
+        },
+        {
+            "name": "Pinnacle III DC Power Supply",
+            "type": "Pulsed and DC Power Systems",
+            "features": [
+                "Lower operating and installed costs",
+                "Achieve fast arc response",
+                "Configure arc response",
+                "Maximize process efficiency",
+                "Precisely control your process"
+            ],
+            "benefits": [
+                "Low stored energy — less than 1 mJ per 1 kW of output",
+                "No tap changes",
+                "Output repeatability of ±0.1%",
+                "Target conditioning cycle (TCC) — minimizes conditioning time for new targets",
+                "Joule mode — optimized energy delivery"
+            ]         
+        },
+        {
+            "name": "Mikron Photrix Series",
+            "type": "Thermal sensing",
+            "features": [
+                "Low-to-high temperature, highly configurable, short-wavelength pyrometer.",
+                "High measurement speeds (1ms).",
+                "High resolution (greater than 1°C)."
+            ],
+            "benefits": [
+                "Improve temperature critical processes with accurate in-situ measurements.",
+                "Flexible optical design options allow for ease of integration.",
+                "Integrate into process control loops with reliable measurement data."
+            ]
+        },
+        {
+            "name": "Impac IN 5/5 plus Series Pyrometers",
+            "type": "Thermal sensing",
+            "features": [
+                "With analog output 0 or 4 to 20 mA, digital interface RS232 or RS485",
+                "Laser targeting light sighting system",
+                "High accuracy due to digital linearization of the output",
+                "Small spot sizes, min. 1.1 mm",
+                "Adjustable exposure time",
+                "Compact housing"
+            ],
+            "benefits": [
+                "Adjust emissivity and exposure time directly in the instrument",
+                "Remotely adjust instrument parameters and configure a temperature subrange",
+                "Utilize various optics available for optimal matching of the instrument to the application",
+                "Precisely align the pyrometer to the measuring object with a laser target light",
+                "Operate in rough industrial environments",
+                "Digitally store and process temperature data"
+            ]
+        }
+    ],
+    "automotive": [
+        {
+            "name": "TEGAM 1750 Series",
+            "type": "Resistance measurement",
+            "features": [
+                "Micro-ohmmeter Basic Accuracy: 0.02%",
+                "Measurement Speed: 10 ms",
+                "Range : 2 mΩ to 20 MΩ",
+                "Resolution : 100 nΩ",
+                "Programmable reference currents",
+                "GPIB, RS-232 and PLC compatibility",
+                "Kelvin Klips, Spade Lugs or Kelvin Probes available",
+                "Easy to operate and integrate",
+                "3-year Warranty",
+                "Assembled in USA"
+            ],
+            "benefits": [
+                "Super-fast measurements allow maximum optimization of production lines",
+                "Instrument can be used to control high-speed laser trimmers and material handlers",
+                "High-accuracy measurements aloe for precise component sorting, verifying and labeling",
+                "Automatic compensation for thermal and electromagnetic noise maintain high accuracy in factory environments",
+                "Flexible programming options to easily adapt to many different applications",
+                "Multiple communication interface options to readily connect to maximize programming efficiency",
+                "Excellent for dry circuit testing of switches, relays, and connector contacts",
+                "Easily operated via front panel or remote computer"
+            ]
+        },
+        {
+            "name": "Tegam 900 Series Intrinsically Safe Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Thermocouple Thermometer Range : -418 °F to 2502 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "Input Type : K, J, T,E, N, R, S  or B",
+                "2000 Hour Battery Life",
+                "4-digit Auto-Resolution (0.1/1) with Backlight and Function Annuciators",
+                "Certified Intrinsically Safe (UL, CE, ATEX-Compliant)",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "Creative Ergonomic Design",
+                "Three Year Warranty",
+                "Two Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Available",
+                "Assembled  in the USA"
+            ],
+            "benefits": [
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Designed for continuous in the presence of flammable liquids, gases, and mists; certified for use worldwide",
+                "Use one thermometer to support eight different thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs",
+                "Supported by a wide range of intrinsically safe temperature probe options"
+            ]         
+        },
+        {
+            "name": "TEGAM Thermocouple Calibrators",
+            "type": "Temperature sensing",
+            "features": [
+                "Source Accuracy: ±0.003% +5 µV",
+                "Temperature Calibrator Resolution: 0.01 ⁰",
+                "10X Battery Life",
+                "Temperature Calibrator Features Simultaneous Source/Measure",
+                "MIL-STD Durability",
+                "ISO 17025 Cal standard; AMS 2750 Cal optional",
+                "Easy One-Hand Operation",
+                "CE, Complies with 47 CFR Part 15 of the FCC rules, Class B"
+            ],
+            "benefits": [
+                "Source and measure using one instrument",
+                "Superior accuracy assures your thermal equipment is working properly",
+                "Automatic ambient temperature compensation maintains accuracy in diverse conditions",
+                "One-key operation for common industry calibrations",
+                "Sealed keypad and contoured surfaces for easy cleaning",
+                "Preset options foster quick calibration for different equipment",
+                "Long battery life and easily replaced batteries keep your calibrator in continuous operation"
+            ]
+        },
+        {
+            "name": "TEGAM RTD Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: ± 0.4 °F",
+                "Range : -360 to 1100 °F",
+                "Resolution : 0.1°/1°",
+                "Input Type : 100 Ω Platinum RTD",
+                "Low battery indicator",
+                "Big, easy to read LCD display",
+                "NSN: 6625-01-199-0673",
+                "One year warranty",
+                "Assembled in the USA"
+            ],
+            "benefits": [
+                "Works with either 3- or 4-wire RTDs",
+                "Easy operation",
+                "Case is constructed from heavy duty ABS for enhanced durability"
+            ]
+        },
+        {
+            "name": "TEGAM 900 Series Datalogging Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Datalogging Thermometer Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Range : -418 °F to 3308 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "1000-Hour Battery Life",
+                "Input Type : K, J, T , E, B, N, R & S",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "Data Logging and Wireless Transmission Capability",
+                "Creative Ergonomic Design",
+                "Three-Year Warranty",
+                "Two-Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Certificate Available",
+                "CE, Complies with 47 CFR Part 15 of the FCC rules, Class B",
+                "Assembled in the USA"
+            ],
+            "benefits": [
+                "Capture temperature measurements automatically, eliminating recording errors",
+                "Bluetooth LE and iOS/Android app provide seamless connectivity with virtually any software",
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Use one thermometer to support eight different thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs"
+            ]
+        },
+        {
+            "name": "TEGAM Thermistor Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: 0.3%",
+                "Range : -70 to 300 °F (-55 to 150 °C)",
+                "Resolution : 0.1°/1°",
+                "Input Type : 2252 Ω Thermistor",
+                "Ideal for cryogenic and high-temperature research or industrial monitoring",
+                "NSN: 6625-01-429-3273",
+                "One year warranty",
+                "Assembledin the USA"
+            ],
+            "benefits": [
+                "Compatible with all YSI Series 400 probes",
+                "Easy operation",
+                "Case is constructed from heavy duty ABS for enhanced durability"
+            ]
+        },
+        {
+            "name": "TEGAM Datalogging Calibrators",
+            "type": "Temperature sensing",
+            "features": [
+                "Source Accuracy: ±0.005% +5 µV",
+                "Resolution: 0.01 ⁰",
+                "Thermocouple calibrator features 10X Battery Life",
+                "This Temperature Calibrator Features Simultaneous Source/Measure",
+                "MIL-STD Durability",
+                "SSO 17025 Cal standard; AMS 2750 calibration optional",
+                "Easy One-Hand Operation",
+                "Assembled in the USA"
+            ],
+            "benefits": [
+                "Source and measure using one instrument",
+                "Superior accuracy assures your thermal equipment is working properly",
+                "Automatic ambient temperature compensation maintains accuracy in diverse conditions",
+                "One-key operation for common industry calibrations",
+                "Sealed keypad and contoured surfaces for easy cleaning",
+                "Preset options foster quick calibration for different equipment",
+                "Long battery life and easily replaceable batteries keep your calibrator in continuous operation"
+            ]
+        }
+    ]
+}
