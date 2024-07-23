@@ -26,6 +26,9 @@ def query_interpretation(query):
         - Llama: "How much power will I need?"
         - Llama: "What are my power requirements?"
         - Llama: "Can you help me figure out how much power I need?"
+
+    Special instructions:
+    - If the query has multiple questions, check if any of the questions are related to product recommendations. If any question is related to product recommendations, respond with "Product recommendation" and ignore the other questions.
     
     Interpret the query: {}
     """
