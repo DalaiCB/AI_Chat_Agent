@@ -283,5 +283,331 @@
                 "Long battery life and easily replaceable batteries keep your calibrator in continuous operation"
             ]
         }
+    ],
+    "mri": [
+        {
+            "name": "iHP, Air Cooled Series",
+            "type": "Configurable/Modular Industrial & Medical PSUs",
+            "features": [
+                "100% digital control",
+                "Fast current slew rate up to 200 Hz",
+                "High line 342528 Vac 3phase",
+                "Low line 180264 Vac single phase and 3phase",
+                "Outputs parallel up to 1600 A",
+                "Outputs series up to 1000 V",
+                "Semi F47 compliance",
+                "Standard 19\" rack"
+            ],
+            "benefits": [
+                "Active power factor correction",
+                "Air cooled",
+                "Field upgradeable firmware",
+                "Flexible control interfaces",
+                "Medical safety approved - NO ISOLATION XFMR NEEDED",
+                "Multi output precision and modular high power system",
+                "Outputs program as voltage or current source",
+                "Programmable slew rate",
+                "User defined command profiles"
+            ]
+        },
+        {
+            "name": "uMP Gen II Series",
+            "type": "Configurable/Modular PSUs",
+            "features": [
+                "Input Range 85-264 VAC 120-374 VDC",
+                "Frequency Range 47 - 440 Hz",
+                "Inrush Current 40A Peak max. (soft start)",
+                "Efficiency Up to 91.5%",
+                "Power Factor .99 typ, (n/a for 440Hz)",
+                "Standby Power uMP10/16 <13W; uMP04 <6W",
+                "Leakage Current <400uA @ 264 VAC Input",
+                "Holdover Storage 16.7mS minimum @ 1200W",
+                "Isolation Meets EN60950; EN60601",
+                "Factory Set Point Accuracy +/- 1%",
+                "V-Program 0-5V input = 0-100% output",
+                "Overall Regulation 0.4% or 30mV, which ever is greater",
+                "RMS Ripple 0.1% or 10mV, which ever is greater",
+                "P-P Ripple 1.0% or 50mV, which ever is greater"
+            ],
+            "benefits": [
+                "User Interface Analog or PMBus (for Primary)"
+            ]
+        },
+        {
+            "name": "AEQ Series",
+            "type": "UltraVolt High Voltage PCB Mount",
+            "features": [
+                "Ultra-miniature size (0.5” cube)",
+                "Regulated 0 to +/-300 V (dual polarity units with CT), 0 to 600 V (floating/reversible units)",
+                "5 or 12 VDC input",
+                "Output fully adjustable over 0 VDC to maximum rating",
+                "+/-1500 VDC input to output isolation",
+                "Output short-circuit protection",
+                "0.5 W or 1.25 W maximum output power",
+                "Low ripple (<1% peak to peak)"
+            ],
+            "benefits": [
+                "Programmable high voltage output provides superior accuracy over proportional designs",
+                "Separate Vcc and high voltage output programming signal eases system DC power configuration",
+                "Reliable modular package, >3,000,000 hours MTBF (per Bellcore TR332)",
+                "1500 VDC input to output isolation is 3x higher than the competition",
+                "Load regulation 30% or less (FL-NL)"
+            ]
+        },
+        {
+            "name": "CoolX1800 Series",
+            "type": "Configurable/Modular PSUs",
+            "features":[
+                "93% efficiency",
+                "Five-year warranty",
+                "MTBF figures of > 200000",
+                "Safety approved to 5000 m altitude"
+            ],
+            "benefits": [
+                "High Power Density: 1800 W in a 267 x 127 x 41 mm package",
+                "Full Safety Agency Approvals: See Technical Specs for details",
+                "Intelligent Digital Power: Access maximum flexibility with analog and digital control (PMBus®)",
+                "User- and Field-Configurable: Configure outputs to setpoint voltages; connect in parallel/series for higher output current and/or voltages",
+                "High Reliability and Efficiency: Help ensure quality, reliability, and a low total cost of ownership"
+            ]
+        },
+        {
+            "name": "Evergreen™ FCM Series Shelf",
+            "type": "high power AC-DC power converters",
+            "description": "The modular approach of Evergreen high power AC-DC power converters allows fast customization, as well as quick power scaling by stacking shelves. Intelligent, system-level command eliminates the need to communicate with and control units individually. This platform’s 38 W/in3 power density provides more power in less space, and > 95% efficiency with 0.98 power factor correction reduces utility costs and minimizes heat."
+        }
+
+    ],
+    "rf": [
+        {
+            "name": "LPS200-M Series",
+            "type": "Open Frame Low Power PSUs",
+            "features": [
+                "Inrush current 50 A max., cold start @ 25 °C",
+                "Frequency 47 - 63 Hz",
+                "Input range 90 - 264 VAC, 120 - 300 VDC",
+                "Safety ground leakage current 275 uA @ 50/60 Hz, 264 VAC input",
+                "Efficiency 88% typical at full load",
+                "Power Factor 0.99 typical",
+                "Power fail Open collector, 6 ms before loss of regulation",
+                "Adjustment range ±10% minimum on the main output",
+                "Hold-up time 16 ms @ 250 W load, 120 VAC input",
+                "Fan Output 12 V @ 1A isolated, +/-5%",
+                "Remote Sense Compensates for 0.5 V lead drop"
+            ],
+            "benefits": [
+                "Overload protection",
+                "Built-in Class B EMI filter",
+                "Remote sense",
+                "EN61000-3-2 compliant"
+            ]
+        },
+        {
+            "name": "uMP",
+            "type": "Configurable/Modular PSUs",
+            "features": [
+                "Input Range 85-264 VAC 120-374 VDC",
+                "Frequency Range 47 - 440 Hz",
+                "Inrush Current 40A Peak max. (soft start)",
+                "Efficiency Up to 91.5%",
+                "Power Factor .99 typ, (n/a for 440Hz)",
+                "Standby Power uMP10/16 <13W; uMP04 <6W",
+                "Leakage Current <400uA @ 264 VAC Input",
+                "Holdover Storage 16.7mS minimum @ 1200W",
+                "Isolation Meets EN60950; EN60601",
+                "Factory Set Point Accuracy +/- 1%",
+                "V-Program 0-5V input = 0-100% output",
+                "Overall Regulation 0.4% or 30mV, which ever is greater",
+                "RMS Ripple 0.1% or 10mV, which ever is greater",
+                "P-P Ripple 1.0% or 50mV, which ever is greater"
+            ],
+            "benefits": [
+                "User Interface Analog or PMBus (for Primary)"
+            ]
+        },
+        {
+            "name": "iHP",
+            "type": "Configurable/Modular Industrial & Medical PSUs",
+            "features": [
+                "100% digital control",
+                "Fast current slew rate up to 200 Hz",
+                "High line 342528 Vac 3phase",
+                "Low line 180264 Vac single phase and 3phase",
+                "Outputs parallel up to 1600 A",
+                "Outputs series up to 1000 V",
+                "Semi F47 compliance",
+                "Standard 19\" rack"
+            ],
+            "benefits": [
+                "Active power factor correction",
+                "Air cooled",
+                "Field upgradeable firmware",
+                "Flexible control interfaces",
+                "Medical safety approved - NO ISOLATION XFMR NEEDED",
+                "Multi output precision and modular high power system",
+                "Outputs program as voltage or current source",
+                "Programmable slew rate",
+                "User defined command profiles"
+            ]
+        },
+        {
+            "name": "Ultimod Series",
+            "type": "Configurable/Modular PSUs",
+            "features": [
+                "92% efficiency",
+                "Five-year warranty",
+                "SEMI F47 compliant",
+                "Up to 12 isolated DC outputs",
+                "Low acoustic noise for noise-sensitive applications"
+            ],
+            "benefits": [
+                "High Power Density: Up to 1200 W output power in a compact 1U form factor",
+                "Full Safety Agency Approvals: UL/EN60950 (second edition) and UL/EN60601-1 (third edition) compliant",
+                "User- and Field-Configurable: Suite of output signals and user-configurable functions increase design-in flexibility",
+                "High Reliability and Efficiency: 92% efficiency guarantees increased system reliability"
+            ]
+        },
+        {
+            "name": "iMP",
+            "type": "Configurable PSUs",
+            "description": "In the face of rapid design-to-manufacture timescales, fleeting market opportunities, and the imperative to reduce whole-life costs, flexibility is crucial, especially in system power provision. To address these challenges, Advanced Energy's Embedded Power division offers the iMP™ series of configurable power supplies. These units are fully digitally programmable, expertly designed to provide adaptability and support in navigating today's fast-paced, cost-conscious industrial landscape."
+        },
+        {
+            "name": "LCM Enclosed Power Supplies",
+            "type": "AC-DC enclosed power supplies",
+            "description": "Ideal for demanding sealed box and outdoor applications, Advanced Energy's LCM series of AC-DC enclosed power supplies have a reputation for outstanding quality and high efficiency at a competitive cost, with safety approvals for industrial and medical equipment. The quality and reliability of the LCM series is assured through careful component selection, automated production processes, sophisticated circuit design and a digital control loop. Digital control also enables the LCM family to be rapidly and cost-effectively modified to suit the exact needs of your application. Detailed technical reference notes and outstanding technical support make it easy for you to integrate the LCM series into your design. AE has invested in the manufacturing of the LCM series to shorten lead times and lower the minimum order quantity for non-stock units. With a range from 300 to 3000 W, we provide for a very wide range of AC-DC embedded power requirement."
+        },
+        {
+            "name": "CoolX",
+            "type": "Configurable PSUs",
+            "description": "Advanced Energy's CoolX product line offers a versatile family of configurable AC/DC solutions, ranging from 600 W to 3000 W. This series encompasses both Natural Convection Cooled and Variable Speed Fan Cooled systems. Capable of delivering up to 24 outputs with both series and parallel options, these units offer PMBus Comms and Control along with Analog Control for enhanced versatility. Further features include a 24 W Bias/Aux supply, low leakage, and 4 KV surge protection. With a high-altitude rating of up to 5000 meters, these robust solutions are designed to perform under a wide range of environmental conditions."
+        }
+    ],
+    "lasers": [
+        {
+            "name": "Evergreen™ FCM Series Shelf",
+            "type": "high power AC-DC power converters",
+            "description": "The modular approach of Evergreen high power AC-DC power converters allows fast customization, as well as quick power scaling by stacking shelves. Intelligent, system-level command eliminates the need to communicate with and control units individually. This platform’s 38 W/in3 power density provides more power in less space, and > 95% efficiency with 0.98 power factor correction reduces utility costs and minimizes heat."
+        },
+        {
+            "name": "LCM1500 Series",
+            "type": "Enclosed PSUs",
+            "features": [
+                "10% adjustment range",
+                "12 Watts per cubic inch",
+                "1500 Watts output power with no derating",
+                "40 °C to 70 °C with derating",
+                "High efficiency: 89% typical",
+                "Latest CCC approvals (5000m)",
+                "Optional 5V @ 2A housekeeping",
+                "RoHS 2",
+                "Hold-up Time 20 mSec",
+                "Power Factor 0.99 Typical",
+                "Inrush Currect <= 25A Peake",
+                "Frequency 47 - 440 Hz",
+                "Input Range 90-264 VAC",
+                "Leakage <0.3mA at 264 VAC",
+                "Efficiency >89% TYP",
+                "Adjust Range +/- 10%",
+                "Over Voltage Protection 125% to 145% of rated output",
+                "Over Current Protection 105% to 125% of rated output",
+                "Current Share Forced to within 10%",
+                "Max Units in Parallel 10",
+                "Noise (P-P) 1% max",
+                "Total Regulation +/- 2.0%",
+                "Fan Noise <45dBA, 80% load 30C, off with inhibit"
+            ],
+            "benefits": [
+                "Conformal coat option",
+                "DSP controlled",
+                "EMI Class A",
+                "Industrial/Medical Safety Approvals",
+                "Low cost",
+                "ORing FET",
+                "Remote margin programming",
+                "Variable speed smart fans"
+            ]
+        },
+        {
+            "name": "uMP Gen II Series",
+            "type": "Configurable/Modular PSUs",
+            "features": [
+                "Input Range 85-264 VAC 120-374 VDC",
+                "Frequency Range 47 - 440 Hz",
+                "Inrush Current 40A Peak max. (soft start)",
+                "Efficiency Up to 91.5%",
+                "Power Factor .99 typ, (n/a for 440Hz)",
+                "Standby Power uMP10/16 <13W; uMP04 <6W",
+                "Leakage Current <400uA @ 264 VAC Input",
+                "Holdover Storage 16.7mS minimum @ 1200W",
+                "Isolation Meets EN60950; EN60601",
+                "Factory Set Point Accuracy +/- 1%",
+                "V-Program 0-5V input = 0-100% output",
+                "Overall Regulation 0.4% or 30mV, which ever is greater",
+                "RMS Ripple 0.1% or 10mV, which ever is greater",
+                "P-P Ripple 1.0% or 50mV, which ever is greater"
+            ],
+            "benefits": [
+                "User Interface Analog or PMBus (for Primary)"
+            ]
+        },
+        {
+            "name": "iHP, Air Cooled Series",
+            "type": "Configurable/Modular Industrial & Medical PSUs",
+            "features": [
+                "100% digital control",
+                "Fast current slew rate up to 200 Hz",
+                "High line 342528 Vac 3phase",
+                "Low line 180264 Vac single phase and 3phase",
+                "Outputs parallel up to 1600 A",
+                "Outputs series up to 1000 V",
+                "Semi F47 compliance",
+                "Standard 19\" rack"
+            ],
+            "benefits": [
+                "Active power factor correction",
+                "Air cooled",
+                "Field upgradeable firmware",
+                "Flexible control interfaces",
+                "Medical safety approved - NO ISOLATION XFMR NEEDED",
+                "Multi output precision and modular high power system",
+                "Outputs program as voltage or current source",
+                "Programmable slew rate",
+                "User defined command profiles"
+            ]
+        },
+        {
+            "name": "LCM3000 Series",
+            "type": "Enclosed PSUs",
+            "features": [
+                "+/ 25% adjustment range",
+                "40 °C to 70 °C with derating",
+                "5 Year Warranty",
+                "VProgram from 20% to 125%",
+                "Input Range 90-264, Derate to 1500W <180V",
+                "Input Frequency 50/60 nominal",
+                "Fusing 30A both lines",
+                "Inrush Current <=60A peak @ 230VAC",
+                "Power Factor 0.95 typical",
+                "Input Current 20A RMS max @ 100VAC",
+                "Efficiency >90%",
+                "Leakage Current <500uA @ 240VAC",
+                "Set point +/-0.5%",
+                "Total Regulation Main +/-1%; 5VSB +/-5%",
+                "Output Noise (PARD) 1% max p-p",
+                "Forced Load Sharing to within 10% of all Outputs",
+                "PRI-Chassis 2KVAC / 2828VDC",
+                "PRI-SEC 3KVAC / 4242VDC 2xMOPP",
+                "SEC-Chassis 500VDC",
+                "# units in Parallel Up to 8"              
+            ],
+            "benefits": [
+                "DSP Controlled",
+                "High Efficiency",
+                "Low Cost",
+                "Smart Fans",
+                "VAR configurable to any voltage from a single unit"
+            ]
+        }
     ]
 }
