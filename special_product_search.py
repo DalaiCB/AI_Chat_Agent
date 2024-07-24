@@ -18,13 +18,22 @@ def get_products_by_category(category):
 
 def generate_openai_prompt(user_query, products):
     product_info = "\n".join(
-        [f"Name: {p['name']}\nFeatures: {', '.join(p['features'])}\nBenefits: {', '.join(p['benefits'])}" for p in products]
+        [
+            f"Name: {p.get('name', 'Unknown')}\n"
+            + (
+                f"Features: {', '.join(p.get('features', []))}\nBenefits: {', '.join(p.get('benefits', []))}"
+                if 'features' in p and 'benefits' in p
+                else f"Description: {p.get('description', 'No description available')}"
+            )
+            for p in products
+        ]
     )
     prompt = f"User query: {user_query}\n\nProduct information:\n{product_info}\n\nBased on the above product information, provide a short and precise product recommendation and explain why. Don't include 'Recommendation', 'Reason', or 'Explanation' etc in your response."
     
     ic(prompt)
     
     return prompt
+
 
 """ def openai_call(prompt):
     response = client.chat.completions.create(
@@ -42,8 +51,11 @@ def search_special_product(user_query):
         f"User query: \"{user_query}\"\n\n"
         f"Categories:\n"
         f"1. solar photovoltaics: Products related to solar energy systems and their components, including solar panels, inverters, and power supplies.\n"
-        f"2. automotive: Products related to vehicles, including electric motors, batteries, and other automotive components.\n\n"
-        f"Based on the user query, determine which category (Solar Photovoltaics or Automotive) best matches the query. Provide only the category name and it should be all in lower case letters."
+        f"2. automotive: Products related to vehicles, including electric motors, batteries, and other automotive components.\n"
+        f"3. mri: Products related to magnetic resonance imaging (MRI) machines and their components, including scanners, coils, and power supplies.\n"
+        f"4. rf: Products related to RF electrosurgery devices and their components, including generators, electrodes, and power supplies.\n"
+        f"5. lasers: Products related to laser systems and their components, including laser sources, optics, and power supplies.\n\n"
+        f"Based on the user query, determine which category best matches the query. Provide only the category name and it should be all in lower case letters."
     )
 
     category = openai_call(category_prompt)
@@ -53,5 +65,5 @@ def search_special_product(user_query):
     return recommendation
 
 if __name__ == "__main__":
-    user_query = "For my solar panel plant, I need to be able to to measure the temprature in my Thin Film Deposition machine. What do I need for that? What product would you recommend?"
+    user_query = "I manufacture CNC machines for small applications e.g. the development of small tools. I need a power supply that is affordable and reliable. Can you let me know what you think I will need in terms of power, and if you have any products that meet those requirements?"
     print(search_special_product(user_query))
