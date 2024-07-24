@@ -179,9 +179,6 @@ def main(raw_user_query, session_id):
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
-
-    print("\n\t\tUser Query:\n", user_query)
-    print(f"\nInterpretation: {user_query_interp}")
     
     # Check if the user query is a product recommendation query
     try:
@@ -191,7 +188,7 @@ def main(raw_user_query, session_id):
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
-            
+
             return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
@@ -200,7 +197,7 @@ def main(raw_user_query, session_id):
         if user_query_interp == "Product recommendation":            
             special_case_prompt = (
                     f"User query: \"{user_query}\"\n\n"
-                    f"Based on the user query, determine if the query is related to solar photovoltaics or automotive products. If the query is related to solar photovoltaics or automotive, return True. Otherwise, return False. Only respond with 'True' or 'False'."
+                    f"Based on the user query, determine if the query is related to solar photovoltaics, automotive, Magnetic resonance imaging (MRI), RF electrosurgery devices, and products related to laser systems. If the query is related to any of these, return True. Otherwise, return False. Only respond with 'True' or 'False'."
                 )
             openai_response = openai_call(special_case_prompt)
             special_case = eval(openai_response)
@@ -219,12 +216,17 @@ def main(raw_user_query, session_id):
                 recommended_products = "No products found for the specified criteria."
             
             return recommended_products
+        
+        print(f"\n\n{log_line}\n{log_line}")
+        print("\n\t\tUser Query:\n", user_query)
+        print(f"\nInterpretation: {user_query_interp}")
+        print("\n\t\tAgent Response:\n", recommended_products)
 
     except Exception as e:
         print("\n\t\tError: Product recommendation failed.\n", e)
         
         return ERROR_MESSAGE
-    
+
     # Regular search for product information
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
@@ -235,6 +237,8 @@ def main(raw_user_query, session_id):
     
     # LOGS
     print(f"\n\n{log_line}\n\t\tLOG\n{log_line}")
+    print("\n\t\tUser Query:\n", user_query)
+    print(f"\nInterpretation: {user_query_interp}")
     print("Extracted product Name:", extracted_product_names)
     print("\n\t\tAgent Response:\n", agent_response)
     print(f"\n\n{log_line}\n\t\tLOG\n{log_line}\n")
@@ -243,7 +247,8 @@ def main(raw_user_query, session_id):
 
 
 if __name__ == "__main__":
-    user_query = "For my solar panel plant, I need to be able to to measure the temprature in my Thin Film Deposition machine. What do I need for that? What product would you recommend?"
+    user_query = 'I am building a manufacturing plant for flat solar panels. I need to produce 100 450W Monocrystaline Solar Panels that are 75.2"L x 44.7"W x 1.2"H per day. What kind of power will I need to run the magnetron sputtering unit required for runs of this size. Do you have any units that will meet that power requirement?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
-    
-    print("\n\t\tAgent Response:\n", main(user_query, session_id))
+    agent_response = main(user_query, session_id)
+    print("\n\t\tAgent Response:\n", agent_response)
+    print(type(agent_response))
