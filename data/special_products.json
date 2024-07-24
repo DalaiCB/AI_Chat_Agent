@@ -80,7 +80,7 @@
         },
         {
             "name": "Mikron Photrix Series",
-            "type": "Thermal sensing",
+            "type": "Thermal sensing for thin film deposition",
             "features": [
                 "Low-to-high temperature, highly configurable, short-wavelength pyrometer.",
                 "High measurement speeds (1ms).",
@@ -94,7 +94,7 @@
         },
         {
             "name": "Impac IN 5/5 plus Series Pyrometers",
-            "type": "Thermal sensing",
+            "type": "Thermal sensing for soldering",
             "features": [
                 "With analog output 0 or 4 to 20 mA, digital interface RS232 or RS485",
                 "Laser targeting light sighting system",
