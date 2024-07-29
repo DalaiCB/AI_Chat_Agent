@@ -609,5 +609,266 @@
                 "VAR configurable to any voltage from a single unit"
             ]
         }
-    ]
+    ],
+    "food safety": [
+        {
+            "name": "TEGAM 900 Series Digital Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Thermocouple Thermometer Range : -418 °F to 2502 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "2000 Hour Battery Life",
+                "Input Type : K, J, T, E",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "4-digit Auto-Resolution (0.1/1) with Backlight and Function Annuciators",
+                "Creative Ergonomic Design",
+                "3-Year Warranty",
+                "2-Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Certificate Available"
+            ],
+            "benefits": [
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Use one thermometer to support the four most popular thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs"
+            ]
+        },
+        {
+            "name": "Tegam 900 Series Intrinsically Safe Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Thermocouple Thermometer Range : -418 °F to 2502 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "Input Type : K, J, T, E, N, R, S  or B",
+                "2000 Hour Battery Life",
+                "4-digit Auto-Resolution (0.1/1) with Backlight and Function Annuciators",
+                "Certified Intrinsically Safe (UL, CE, ATEX-Compliant)",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "Creative Ergonomic Design",
+                "Three Year Warranty",
+                "Two Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Available"
+            ],
+            "benefits": [
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Designed for continuous in the presence of flammable liquids, gases, and mists; certified for use worldwide",
+                "Use one thermometer to support eight different thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs",
+                "Supported by a wide range of intrinsically safe temperature probe options"
+            ]
+        },
+        {
+            "name": "TEGAM 900 Series Datalogging Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Datalogging Thermometer Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Range : -418 °F to 3308 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "1000-Hour Battery Life",
+                "Input Type : K, J, T , E, B, N, R & S",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "Data Logging and Wireless Transmission Capability",
+                "Creative Ergonomic Design",
+                "Three-Year Warranty",
+                "Two-Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Certificate Available",
+                "CE, Complies with 47 CFR Part 15 of the FCC rules, Class B",
+                "Assembled in the USA"
+            ],
+            "benefits": [
+                "Capture temperature measurements automatically, eliminating recording errors",
+                "Bluetooth LE and iOS/Android app provide seamless connectivity with virtually any software",
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Use one thermometer to support eight different thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs"
+            ]
+        },
+        {
+            "name": "TEGAM Thermocouple Calibrators",
+            "type": "Temperature sensing",
+            "features": [
+                "Source Accuracy: ±0.003% +5 µV",
+                "Temperature Calibrator Resolution: 0.01 ⁰",
+                "10X Battery Life",
+                "Temperature Calibrator Features Simultaneous Source/Measure",
+                "MIL-STD Durability",
+                "ISO 17025 Cal standard; AMS 2750 Cal optional",
+                "Easy One-Hand Operation",
+                "CE, Complies with 47 CFR Part 15 of the FCC rules, Class B"
+            ],
+            "benefits": [
+                "Source and measure using one instrument",
+                "Superior accuracy assures your thermal equipment is working properly",
+                "Automatic ambient temperature compensation maintains accuracy in diverse conditions",
+                "One-key operation for common industry calibrations",
+                "Sealed keypad and contoured surfaces for easy cleaning",
+                "Preset options foster quick calibration for different equipment",
+                "Long battery life and easily replaced batteries keep your calibrator in continuous operation"
+            ]
+        },
+        {
+            "name": "TEGAM Datalogging Calibrators",
+            "type": "Temperature sensing",
+            "features": [
+                "Source Accuracy: ±0.005% +5 µV",
+                "Resolution: 0.01 ⁰",
+                "Thermocouple calibrator features 10X Battery Life",
+                "This Temperature Calibrator Features Simultaneous Source/Measure",
+                "MIL-STD Durability",
+                "SSO 17025 Cal standard; AMS 2750 calibration optional",
+                "Easy One-Hand Operation",
+                "Assembled in the USA"
+            ],
+            "benefits": [
+                "Source and measure using one instrument",
+                "Superior accuracy assures your thermal equipment is working properly",
+                "Automatic ambient temperature compensation maintains accuracy in diverse conditions",
+                "One-key operation for common industry calibrations",
+                "Sealed keypad and contoured surfaces for easy cleaning",
+                "Preset options foster quick calibration for different equipment",
+                "Long battery life and easily replaceable batteries keep your calibrator in continuous operation"
+            ]
+        }
+    ],
+    "mass spectrometry": [
+        {
+            "name": "UltraVolt AEQ Series",
+            "type": "High Voltage PCB Mount",
+            "features": [
+                "Ultra-miniature size (0.5” cube)",
+                "Regulated 0 to +/-300 V (dual polarity units with CT), 0 to 600 V (floating/reversible units)",
+                "5 or 12 VDC input",
+                "Output fully adjustable over 0 VDC to maximum rating",
+                "+/-1500 VDC input to output isolation",
+                "Output short-circuit protection",
+                "0.5 W or 1.25 W maximum output power",
+                "Low ripple (<1% peak to peak)"
+            ],
+            "benefits": [
+                "Programmable high voltage output provides superior accuracy over proportional designs",
+                "Separate Vcc and high voltage output programming signal eases system DC power configuration",
+                "Reliable modular package, >3,000,000 hours MTBF (per Bellcore TR332)",
+                "1500 VDC input to output isolation is 3x higher than the competition", 
+                "Load regulation 30% or less (FL-NL)"
+            ]
+        },
+        {
+            "name": "UltraVolt AA series",
+            "type": "Temperature sensing",
+            "features": [
+                "Configurable high voltage output, power, and polarity in a common footprint",
+                "Available 0 to 5 VDC or 0 to 10 VDC (full-scale) analog interfaces",
+                "Control and monitoring of high voltage output and current",
+                "Selection of electrical, shielding, and mechanical integration options",
+                "Ripple performance as low as 100 ppm (0.05 Vpp)"
+            ],
+            "benefits": [
+                "Upgrade module and system performance without changing PCB layout",
+                "Speed time-to-market by simplifying controls integration",
+                "Improve responsive and control of high voltage output",
+                "Expand mechanical integration, external RF protection, and interconnection possibilities",
+                "Increase system repeatability, resolution, and long-term reliability"
+            ]
+        },
+        {
+            "name": "UltraVolt LE Series",
+            "type": "High Voltage PCB Mount",
+            "features": [
+                "Loq ripple output performance",
+                "Available temperature coefficient to 25 ppm/⁰C (optional 10 ppm/⁰C 1LE to 15LE only) with line regulation less than 25 ppm",
+                "High voltage output control via differential analog inputs",
+                "Full-featured 0 to 10 VDC control; interface includes voltage/current controls and monitors",
+                "Electrical performance and mechanical integration options"
+            ],
+            "benefits": [
+                "Improve measurement repeatability, resolution, and long-term tool reliability",
+                "Enable more consistent high voltage performance in varying ambient temperatures and line loading conditions",
+                "Enhance high voltage output performance",
+                "Minimize control signal noise and drift",
+                "Simplify integration with responsive control of module performance",
+                "Fast track electrical and mechanical integration tasks"
+            ]
+        },
+        {
+            "name": "LCM1500 Series",
+            "type": "Enclosed PSUs",
+            "features": [
+                "10% adjustment range",
+                "12 Watts per cubic inch",
+                "1500 Watts output power with no derating",
+                "40 °C to 70 °C with derating",
+                "High efficiency: 89% typical",
+                "Latest CCC approvals (5000m)",
+                "Optional 5V @ 2A housekeeping",
+                "RoHS 2",
+                "Hold-up Time 20 mSec",
+                "Power Factor 0.99 Typical",
+                "Inrush Currect <= 25A Peake",
+                "Frequency 47 - 440 Hz",
+                "Input Range 90-264 VAC",
+                "Leakage <0.3mA at 264 VAC",
+                "Efficiency >89% TYP",
+                "Adjust Range +/- 10%",
+                "Over Voltage Protection 125% to 145% of rated output",
+                "Over Current Protection 105% to 125% of rated output",
+                "Current Share Forced to within 10%",
+                "Max Units in Parallel 10",
+                "Noise (P-P) 1% max",
+                "Total Regulation +/- 2.0%",
+                "Fan Noise <45dBA, 80% load 30C, off with inhibit"
+            ],
+            "benefits": [
+                "Conformal coat option",
+                "DSP controlled",
+                "EMI Class A",
+                "Industrial/Medical Safety Approvals",
+                "Low cost",
+                "ORing FET",
+                "Remote margin programming",
+                "Variable speed smart fans"
+            ]
+        },
+        {
+            "name": "CoolX",
+            "type": "Configurable PSUs",
+            "description": "Advanced Energy's CoolX product line offers a versatile family of configurable AC/DC solutions, ranging from 600 W to 3000 W. This series encompasses both Natural Convection Cooled and Variable Speed Fan Cooled systems. Capable of delivering up to 24 outputs with both series and parallel options, these units offer PMBus Comms and Control along with Analog Control for enhanced versatility. Further features include a 24 W Bias/Aux supply, low leakage, and 4 KV surge protection. With a high-altitude rating of up to 5000 meters, these robust solutions are designed to perform under a wide range of environmental conditions."
+        }
+    ],
+    "vital signs monitoring": [
+        {
+            "name": "TEGAM 900 Series Digital Thermometers",
+            "type": "Temperature sensing",
+            "features": [
+                "Accuracy: ±(0.04% rdg + 0.3 °C)",
+                "Thermocouple Thermometer Range : -418 °F to 2502 °F",
+                "Resolution : 0.1/1 °C/°F/K",
+                "2000 Hour Battery Life",
+                "Input Type : K, J, T, E",
+                "Probe Offset",
+                "Displays Real-Time Statistical Data",
+                "4-digit Auto-Resolution (0.1/1) with Backlight and Function Annuciators",
+                "Creative Ergonomic Design",
+                "3-Year Warranty",
+                "2-Year Calibration Guarantee",
+                "Optional ISO 17025 Calibration Certificate Available"
+            ],
+            "benefits": [
+                "High-performance and probe offset function assure you are accurately monitoring your processes",
+                "Use one thermometer to support the four most popular thermocouple types",
+                "Ultra-long battery life means your thermometer is always ready; educed operating costs over product lifecycle",
+                "Easy one-hand operation and convenience",
+                "2-year calibration cycle means less downtime and lower costs"
+            ]
+        }
+    ] 
 }
