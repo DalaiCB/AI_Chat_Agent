@@ -2,6 +2,7 @@ import os
 import json
 from icecream import ic
 from openai import OpenAI
+
 from openai_api import openai_call
 
 # Load your API key from an environment variable or directly set it here
@@ -54,16 +55,21 @@ def search_special_product(user_query):
         f"2. automotive: Products related to vehicles, including electric motors, batteries, and other automotive components.\n"
         f"3. mri: Products related to magnetic resonance imaging (MRI) machines and their components, including scanners, coils, and power supplies.\n"
         f"4. rf: Products related to RF electrosurgery devices and their components, including generators, electrodes, and power supplies.\n"
-        f"5. lasers: Products related to laser systems and their components, including laser sources, optics, and power supplies.\n\n"
+        f"5. lasers: Products related to laser systems such as CNC machines and their components, including laser sources, optics, and power supplies.\n"
+        f"6. food safety: Products related to food safety testing and monitoring, including sensors, detectors, and analyzers.\n"
+        f"7. mass spectrometry: Products related to mass spectrometry systems and their components, including ion sources, detectors, and power supplies.\n"
+        f"8. vital signs monitoring: Products related to vital signs monitoring devices and their components, including sensors, displays, and power supplies.\n"
         f"Based on the user query, determine which category best matches the query. Provide only the category name and it should be all in lower case letters."
     )
 
     category = openai_call(category_prompt)
+    print("\nCategory:", category)
 
     recommendation = openai_call(generate_openai_prompt(user_query, get_products_by_category(category)))
 
     return recommendation
 
 if __name__ == "__main__":
+    #user_query = "I am a quality manager at a beef processing plant. I need to make sure tempratures are kept at the correct temprature throughout the line. What type of device would be good for this task?"
     user_query = "I manufacture CNC machines for small applications e.g. the development of small tools. I need a power supply that is affordable and reliable. Can you let me know what you think I will need in terms of power, and if you have any products that meet those requirements?"
     print(search_special_product(user_query))
