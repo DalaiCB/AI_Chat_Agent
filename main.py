@@ -174,11 +174,13 @@ def search(user_query, session_id):
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
-    log_line = "----------------------------------------------------"
 
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
+
+    print("\n\nUser Query:", user_query)
+    print("User Query Interpretation:", user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
@@ -216,11 +218,6 @@ def main(raw_user_query, session_id):
                 recommended_products = "No products found for the specified criteria."
             
             return recommended_products
-        
-        print(f"\n\n{log_line}\n{log_line}")
-        print("\n\t\tUser Query:\n", user_query)
-        print(f"\nInterpretation: {user_query_interp}")
-        print("\n\t\tAgent Response:\n", recommended_products)
 
     except Exception as e:
         print("\n\t\tError: Product recommendation failed.\n", e)
@@ -234,14 +231,6 @@ def main(raw_user_query, session_id):
         print("\n\t\tError: General search failed.\n", e)
         
         return ERROR_MESSAGE
-    
-    # LOGS
-    print(f"\n\n{log_line}\n\t\tLOG\n{log_line}")
-    print("\n\t\tUser Query:\n", user_query)
-    print(f"\nInterpretation: {user_query_interp}")
-    print("Extracted product Name:", extracted_product_names)
-    print("\n\t\tAgent Response:\n", agent_response)
-    print(f"\n\n{log_line}\n\t\tLOG\n{log_line}\n")
     
     return agent_response
 
