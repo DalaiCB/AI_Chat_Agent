@@ -199,7 +199,7 @@ def main(raw_user_query, session_id):
         if user_query_interp == "Product recommendation":            
             special_case_prompt = (
                     f"User query: \"{user_query}\"\n\n"
-                    f"Based on the user query, determine if the query is related to solar photovoltaics, automotive, Magnetic resonance imaging (MRI), RF electrosurgery devices, and laser products (CNC machines, etc) products. If the query is related to any of these, return True. Otherwise, return False. Only respond with 'True' or 'False'."
+                    f"Based on the user query, determine if the query is related to solar photovoltaics, automotive, Magnetic resonance imaging (MRI), RF electrosurgery devices, and laser products (CNC machines, etc), food safety, mass spectrometry and vital signs monitoring products. If the query is related to any of these, return True. Otherwise, return False. Only respond with 'True' or 'False'."
                 )
             openai_response = openai_call(special_case_prompt)
             special_case = eval(openai_response)
