@@ -47,7 +47,7 @@ def format_response(llama_response):
 def send_request(user_query, datasheet_content):
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=datasheet_content, question=user_query)
-    print("\n\n\t\tPROMPT:\n", prompt)
+    #print("\n\n\t\tPROMPT:\n", prompt)
     
     # Send a POST request to the Llama API with the prompt
     try:
