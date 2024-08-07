@@ -17,6 +17,7 @@ def list_models_check(user_query):
     1. "What are the models of LGA80?"
     2. "Can you give me the part number for LCM300 series?"
     3. "Please show me all the models of NGB60."
+    4. "Give me the part numbers for LGA80D."
 
     Examples for "False":
     1. "What is the warranty period for NGB60?"
@@ -25,6 +26,7 @@ def list_models_check(user_query):
     4. "What is LCM300?"
     5. "What is LGA80D?"
     6. "What is LCM 1000?"
+    7. "Tell me about ERM150."
 
     User Query: {}
     Assistant:
