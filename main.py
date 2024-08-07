@@ -111,6 +111,8 @@ def datasheet_file_path(product_name):
 def read_datasheet_from_file(product_name):
     datasheet_path = datasheet_file_path(product_name)
     
+    print("Datasheet Path:", datasheet_path)
+
     if os.path.exists(datasheet_path):
         with open(datasheet_path, "r") as file:
             datasheet_content = file.read()
@@ -148,10 +150,12 @@ def search(user_query, session_id):
     
     # If product name is not found, use last product name saved in memory.
     if extracted_product_names is None:
+        ic()
         if name_in_memory is None:
             ic()
             return "Product name not found in query.", ''
         else:
+            ic()
             extracted_product_names = []
 
             if " ~~ " in name_in_memory:
@@ -185,7 +189,8 @@ def main(raw_user_query, session_id):
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-    
+        print("\n\nList Models:", list_models_only)
+
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
@@ -199,7 +204,7 @@ def main(raw_user_query, session_id):
         if user_query_interp == "Product recommendation":            
             special_case_prompt = (
                     f"User query: \"{user_query}\"\n\n"
-                    f"Based on the user query, determine if the query is related to solar photovoltaics, automotive, Magnetic resonance imaging (MRI), RF electrosurgery devices, and laser products (CNC machines, etc), food safety, mass spectrometry and vital signs monitoring products. If the query is related to any of these, return True. Otherwise, return False. Only respond with 'True' or 'False'."
+                    f"Based on the user query, determine if the query is related to solar photovoltaics, automotive, Magnetic resonance imaging (MRI), RF electrosurgery devices, and laser products (CNC machines, etc) products. If the query is related to any of these, return True. Otherwise, return False. Only respond with 'True' or 'False'."
                 )
             openai_response = openai_call(special_case_prompt)
             special_case = eval(openai_response)
@@ -220,23 +225,24 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-        print("\n\t\tError: Product recommendation failed.\n", e)
+        print("\n\t\tError: main()\n", e)
         
         return ERROR_MESSAGE
 
     # Regular search for product information
     try:
+        ic()
         agent_response, extracted_product_names = search(user_query, session_id)
+        print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
         print("\n\t\tError: General search failed.\n", e)
-        
         return ERROR_MESSAGE
     
     return agent_response
 
 
 if __name__ == "__main__":
-    user_query = 'I am building a manufacturing plant for flat solar panels. I need to produce 100 450W Monocrystaline Solar Panels that are 75.2"L x 44.7"W x 1.2"H per day. What kind of power will I need to run the magnetron sputtering unit required for runs of this size. Do you have any units that will meet that power requirement?'
+    user_query = 'What is the warranty of Trek603?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
     print("\n\t\tAgent Response:\n", agent_response)
