@@ -1,0 +1,125 @@
+# Model 720A BOND METER
+
+Handheld Bond Measurements From the Low Resistance Experts. The only highly-portable, intrinsically safe bond meter assembled in the U.S.A. that offers superior accuracy, 100–hour battery life, and a 3–year warranty.
+
+TEGAM 720A Bond Meter0.720 mΩ
+
+TEGAM TRUST is an essential feature in any measurement tool and TEGAM’s new 700 Series bond meters are instruments you can rely on every day with confidence. These new models are designed with the clearest and most informative displays for mistake-free usage. They quickly produce accurate readings to reduce the time spent measuring.
+
+TEGAM is the largest producer of bond meters for airframe testing and of the finest low resistance measurements instruments in the world. We combined this experience into the smallest size bond meter that you can take with you anywhere on an airframe with ease. We also developed unique low power techniques so that you don’t have to deal with power cords or battery chargers. The 720A will run for 100 hours on 3 standard AA batteries and has auto power off to preserve them. The battery health is clearly indicated so that you have ample warning for replacement.
+
+PROBES are often more important than the instrument. No one has a wider range of configurations to meet and adapt to your needs. From tight spacing to piercing paint, we have a handle and tip combination for virtually all applications. You can mix styles to make your job easier. The dual connector system permits a Kelvin Clip on one lead for secure ground connection while the ergonomic tri-shape probe on the second lead can be used for accessing multiple points with one hand.
+
+# FEATURES
+
+- Intrinsically Safe
+- Superior Accuracy ±(0.2% |rdg| + 0.02% Range)
+- Widest Probe Selection
+- Uncomplicated, Back-lit Display
+- 100–Hour Battery Life (3AA)*
+- Smallest and Lightest Bond Meter
+- 3–Year Warranty
+- Assembled in USA
+
+*Actual battery life depends on measurement range and frequency.
+
+The creative ergonomic design makes these instruments easy to hold, easy to read and easy to clean. Designed for one-handed operation, these tools are comfortable to carry and use for extended periods of time. Like all TEGAM products, the 700 Series bond meters are designed, assembled and tested in the United States. TEGAM backs this durable instrument with a 3–year warranty to assure you that your investment is sound. For over 30 years, TEGAM has been building hand held instruments for challenging applications. TEGAM’s 700 Series extends that experience into highly portable bond meters tasked with producing reliable measurements in tight spaces encountered with aircraft. They are designed to be durable and easy to use, with advanced features for better measurements. When the Measurement Matters, Be Certain with TEGAM.
+
+Prices and specifications subject to change without notice. 720A-909 Rev. AC
+---
+# Model 720A BOND METER ASSEMBLED IN U.S.A.
+
+|Specifications| | |
+|---|---|---|
+|Resistance Ranges and Test Currents| | |
+|Full Scale|Resolution|Test Current|
+|10.000 mΩ|1 μΩ|100 mA|
+|100.00 mΩ|10 μΩ|10 mA|
+|1.0000 Ω|100 μΩ|1 mA|
+|10.000 Ω|1 mΩ|100 μA|
+|100.00 Ω|10 mΩ|10 μA|
+|Basic Accuracy*|±(0.2% Reading + 0.02% Range)| |
+|Recommended Calibration Cycle|1 year| |
+|Connector Type|M12| |
+|Display|4-Digit Auto-Ranging with Backlight and Function Annunciators| |
+|Reading Rate|3 readings / sec.| |
+|Battery Type|3 AA (IEC LR6, ANSI 15) Alkaline| |
+|Battery Life|Standby: 100 hours; Operation @ 100 mA: 50 hours| |
+|Operating Environment:| | |
+|Temperature|-10 to 55 °C|14 to 131 °F|
+|Humidity|5 to 95%, 10 to 30 °C|5 to 95%, 50 to 86 °F|
+|Altitude|0 to 4600 m|0 to 15,092 ft.|
+|Vibration|Random 10-500 Hz, 0.03 g2/Hz| |
+|Shock|30g Half Sine| |
+|Drop|4 drops from 1 m to concrete| |
+|Dimensions|193 X 84 X 28 mm|7.6 X 3.3 X 1.1 in.|
+|Weight (including batteries)|303.2 g (10.7 oz.)| |
+|Warranty|3 year Parts & Workmanship| |
+|Included Accessories|3 AA Batteries, Quick Start Guide, Certificate of Traceability| |
+
+|Certifications| | | |
+|---|---|---|---|
+| | |Handheld Bond Meter for Hazardous Locations Only as to Intrinsic Safety|Ex ia IIA T4 Ga|
+| | |Class I, Division 1, Group D, T4| |
+| | |II1G|Class I, Zone 0 AEx ia IIA T4 Ga|
+| | |Zone 0 Ex ia IIA T4 Ga| |
+|0539|E506162|UL 21 ATEX 2549| |
+| | |IECEx UL 21.0038|-10 °C ≤ Ta ≤ +55 °C|
+
+|Ordering Information| | |
+|---|---|---|
+| |Model|Description|
+| |720A|Handheld Bond Meter, Intrinsically Safe|
+
+*Accuracy based on recommended calibration cycle.
+---
+# Model 720A BOND METER ASSEMBLED IN U.S.A.
+
+Intrinsically Safe Probes Choose two of the following probes to make a probe set, and choose one or two tip types:
+
+|BKP|Standard Kelvin Probe|
+|---|---|
+|BKEP|Big Kelvin Extended Probe, 700 Series|
+|MKP|Miniature Kelvin Probe|
+|MCP|Miniature Kelvin Coaxial Probe|
+|KC|Kelvin Clip Leads|
+
+# BKP Pin Options
+
+BKP-M2S Probe with “B” Style Pins Installed
+
+0.19” (4.8 mm) Pin Spacing
+
+# MKP Pin Options
+
+MKP-M2S Probe with “B” Style Pins Installed
+
+0.11” (2.8 mm) Pin Spacing
+
+MCP-M2S Probe
+
+BKEP-M2S Big Kelvin Extended Probe 700 Series
+
+KC Kelvin Clip Leads
+---
+# Model 720A BOND METER ASSEMBLED IN U.S.A.
+
+# Ordering Information (continued)
+
+|Part #|Description|
+|---|---|
+|BKP-M2S|Big Kelvin Probe, 700 Series|
+|BKEP-M2S|Big Kelvin Extended Probe, 700 Series|
+|MCP-M2S|Miniature Coaxial Probe, 700 Series|
+|MKP-M2S|Miniature Kelvin Probe, 700 Series|
+|KC-M2|Kelvin Clip, 700 Series, 2m|
+|KC-M5|Kelvin Clip, 700 Series, 5m|
+|720A-BK-KIT|Contains: 720A Bond Meter, 2 BKP-M2S Intrinsically Safe Probes with 2 BKP-B “B” Style Pins installed, 720-910 Tilt Stand / Magnet / Hanger, 700-911 Foam-Filled Hard Carry Case, 720-915 SureGrip™ Cover|
+
+# Optional Accessories
+
+|TEGAM|700–911|720–915|720–910 or 720–912|
+|---|---|---|---|
+| |Foam-Filled Hard Carry Case|SureGrip™ Cover|Tilt Stand / Magnetic / Hanger|
+
+10 TEGAM Way • Geneva, Ohio 44041 • Phone: 440-466-6100 • Fax: 440-466-6110 • tegamsales@aei.com • www.tegam.com
