@@ -40,7 +40,7 @@ def format_response(llama_response):
 def general_request(user_query):
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(user_query=user_query)
-    print("\n\n\t\tPROMPT:\n", prompt)
+    #print("\n\n\t\tPROMPT:\n", prompt)
     
     try:
         response = requests.post(API_URL, headers=HEADERS, json={
