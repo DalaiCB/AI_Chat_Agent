@@ -20,7 +20,7 @@ def search_product_files(product_name):
     matches = []
     for md_file in md_files:
         normalized_md_file = normalize_string(md_file.replace('.md', ''))
-        if normalized_product_name in normalized_md_file:
+        if normalized_product_name == normalized_md_file:
             matches.append(md_file)
     
     print("Matching files:", matches)
