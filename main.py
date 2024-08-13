@@ -181,6 +181,7 @@ def main(raw_user_query, session_id):
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
+    print(" ")
     print("---------------")
     print("\n-----START-----\n")
     print("---------------")
@@ -242,6 +243,7 @@ def main(raw_user_query, session_id):
     print("---------------")
     print("\n------END------\n")
     print("---------------")
+    print(" ")
     
     return agent_response
 
