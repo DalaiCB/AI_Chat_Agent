@@ -171,7 +171,13 @@ def search(user_query, session_id):
 
     return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
-
+def print_end_message(agent_response):
+    print(" ")
+    print("\nAgent Response:\n", agent_response)
+    print("---------------")
+    print("\n------END------\n")
+    print("---------------")
+    print(" ")
 
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
@@ -197,11 +203,16 @@ def main(raw_user_query, session_id):
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
+            agent_response = f"All the models for {series_name} are {model_list}."
 
-            return f"All the models for {series_name} are {model_list}."
+            print_end_message(agent_response)
+            return agent_response
         
         if user_query_interp == "Llama":
-            return general_request(user_query)
+            agent_response = general_request(user_query)
+
+            print_end_message(agent_response)
+            return agent_response
 
         if user_query_interp == "Product recommendation":            
             special_case_prompt = (
@@ -213,7 +224,10 @@ def main(raw_user_query, session_id):
 
             try:
                 if special_case:
-                    return search_special_product(user_query)
+                    agent_response = search_special_product(user_query)
+
+                    print_end_message(agent_response)
+                    return agent_response
             except Exception as e:
                 print("\n\t\tError: Special product search failed.\n", e)
                 
@@ -223,7 +237,8 @@ def main(raw_user_query, session_id):
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
-            
+
+            print_end_message(recommended_products)            
             return recommended_products
 
     except Exception as e:
@@ -239,13 +254,7 @@ def main(raw_user_query, session_id):
         print("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
 
-    print(" ")
-    print("\nAgent Response:\n", agent_response)
-    print("---------------")
-    print("\n------END------\n")
-    print("---------------")
-    print(" ")
-    
+    print_end_message(agent_response)
     return agent_response
 
 
