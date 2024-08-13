@@ -12,9 +12,9 @@ def query_interpretation(query):
     prompt = """
     Please provide a response based on the following query types:
 
-    1. Product recommendation: If the query pertains to finding or recommending a product based on specific criteria, respond with "Product recommendation".
-    2. None: If the query does not involve seeking a product recommendation, respond with "None".
-    3. Llama: If the query does not pertain to specific product recommendation but involves some other type of inquiry that doesn't directly relate to a specific product, respond with "Llama".
+    1. Product recommendation: For queries where the user is asking for recommendations or suggestions about products. This includes queries that mention power, current, or features as part of the search criteria but are focused on finding or recommending products.
+    2. None: For queries focused on specific details, features, specifications, or benefits of one particular product or a specific product model. This includes questions about power, current, efficiency, temperature, and other technical specifications. Even follow-up questions that reference these details should be classified as "None."
+    3. Llama:  For queries that do not ask for product recommendations and are not focused on specific technical details or features. These are often vague or broad questions where the user is not directly asking about a product or its specifications.
 
     Examples of expected responses based on the queries are as follows:
         - Product recommendation: "I need a product with output current of 62.3 amps."
@@ -26,14 +26,19 @@ def query_interpretation(query):
         - None: "What is the operating temperature of LGA80D?"
         - None: "How efficient is the NGB1200?"
         - None: "What is the total power of ADQ700?"
+        - None: "What is the power?"
+        - None: "Give me the precision."
         - Llama: "How much power will I need?"
         - Llama: "What are my power requirements?"
         - Llama: "Can you help me figure out how much power I need?"
 
     Special instructions:
     - If the query has multiple questions, check if any of the questions are related to product recommendations. If any question is related to product recommendations, respond with "Product recommendation" and ignore the other questions.
-    
-    Interpret the query: {}
+    - Determine whether a query is a follow-up question or a new query. If it is likely a follow-up type question, classify it as "None". In doubt, classify it as "None".
+
+    Given the query, provide only the appropriate category label ("Product recommendation," "None," or "Llama").
+
+    Query: {}
     """
     
     # Call the OpenAI API to interpret the query
