@@ -238,6 +238,7 @@ def main(raw_user_query, session_id):
         print("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
 
+    print("\n\t\tAgent Response:\n", agent_response)
     print("---------------")
     print("\n------END------\n")
     print("---------------")
