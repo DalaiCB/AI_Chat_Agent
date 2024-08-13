@@ -143,7 +143,7 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    print(multiple_products)
+    print("\nMultiple Products:", multiple_products)
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
