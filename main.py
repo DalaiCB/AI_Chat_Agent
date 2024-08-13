@@ -183,10 +183,9 @@ def main(raw_user_query, session_id):
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print("\n")
+    print("\n---------------------------\n")
     print("\n\nUser Query:", user_query)
     print("User Query Interpretation:", user_query_interp)
-    print("\n")
     
     # Check if the user query is a product recommendation query
     try:
