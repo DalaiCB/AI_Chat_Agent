@@ -143,17 +143,20 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    print("\nMultiple Products:", multiple_products)
+    print(f"\nExtracted Product Names: {extracted_product_names}")
+    print(f"Multiple Products: {multiple_products}\n")
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
     
     # If product name is not found, use last product name saved in memory.
     if extracted_product_names is None:
-        print("\nNo name in user query")
+        ic()
         if name_in_memory is None:
+            ic()
             return "Product name not found in query.", ''
         else:
+            ic()
             extracted_product_names = []
 
             if " ~~ " in name_in_memory:
@@ -161,23 +164,20 @@ def search(user_query, session_id):
             else:
                 extracted_product_names.append(name_in_memory)
     elif len(extracted_product_names) >= 3:
+        ic()
         return "The model can only handle up to 2 product names at a time. Please specify fewer products."
     elif len(extracted_product_names) == 1:
+        ic()
         product_name = ''.join(extracted_product_names)
         SessionManager().save_session(session_id, product_name)
     elif len(extracted_product_names) > 1:
+        ic()
         multiple_product_names = " ~~ ".join(extracted_product_names)
         SessionManager().save_session(session_id, multiple_product_names)
 
     return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
-def print_end_message(agent_response):
-    print(" ")
-    print("\nAgent Response:\n", agent_response)
-    print("---------------")
-    print("\n------END------\n")
-    print("---------------")
-    print(" ")
+
 
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
@@ -187,10 +187,6 @@ def main(raw_user_query, session_id):
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print(" ")
-    print("---------------")
-    print("\n-----START-----\n")
-    print("---------------")
     print("\n\nUser Query:", user_query)
     print("User Query Interpretation:", user_query_interp)
     
@@ -203,16 +199,11 @@ def main(raw_user_query, session_id):
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
-            agent_response = f"All the models for {series_name} are {model_list}."
 
-            print_end_message(agent_response)
-            return agent_response
+            return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
-            agent_response = general_request(user_query)
-
-            print_end_message(agent_response)
-            return agent_response
+            return general_request(user_query)
 
         if user_query_interp == "Product recommendation":            
             special_case_prompt = (
@@ -224,10 +215,7 @@ def main(raw_user_query, session_id):
 
             try:
                 if special_case:
-                    agent_response = search_special_product(user_query)
-
-                    print_end_message(agent_response)
-                    return agent_response
+                    return search_special_product(user_query)
             except Exception as e:
                 print("\n\t\tError: Special product search failed.\n", e)
                 
@@ -237,8 +225,7 @@ def main(raw_user_query, session_id):
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
-
-            print_end_message(recommended_products)            
+            
             return recommended_products
 
     except Exception as e:
@@ -248,19 +235,19 @@ def main(raw_user_query, session_id):
 
     # Regular search for product information
     try:
+        ic()
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
         print("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
-
-    print_end_message(agent_response)
+    
     return agent_response
 
 
 if __name__ == "__main__":
-    user_query = 'What is the warranty of Trek603?'
+    user_query = 'What is the MTBF of the lpt100?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
     print("\n\t\tAgent Response:\n", agent_response)
-    print(type(agent_response))
+    #print(type(agent_response))

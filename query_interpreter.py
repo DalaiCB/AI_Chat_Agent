@@ -10,7 +10,7 @@ def query_interpretation(query):
     )
     
     prompt = """
-    Please provide a response based on the following query types:
+    Please classify the following query into one of the three categories:
 
     1. Product recommendation: For queries where the user is asking for recommendations or suggestions about products. This includes queries that mention power, current, or features as part of the search criteria but are focused on finding or recommending products.
     2. None: For queries focused on specific details, features, specifications, or benefits of one particular product or a specific product model. This includes questions about power, current, efficiency, temperature, and other technical specifications. Even follow-up questions that reference these details should be classified as "None."
@@ -61,9 +61,6 @@ def query_interpretation(query):
     return "None"
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python search.py <query>")
-        sys.exit(1)
+    query = "What is the total power?"
 
-    query = sys.argv[1]
-    query_interpretation(query)
+    print(query_interpretation(query))
