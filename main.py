@@ -143,19 +143,17 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    ic(multiple_products)
+    print(multiple_products)
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
     
     # If product name is not found, use last product name saved in memory.
     if extracted_product_names is None:
-        ic()
+        print("\nNo name in user query")
         if name_in_memory is None:
-            ic()
             return "Product name not found in query.", ''
         else:
-            ic()
             extracted_product_names = []
 
             if " ~~ " in name_in_memory:
@@ -183,9 +181,9 @@ def main(raw_user_query, session_id):
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print("----------")
+    print("---------------")
     print("\n-----START-----\n")
-    print("----------")
+    print("---------------")
     print("\n\nUser Query:", user_query)
     print("User Query Interpretation:", user_query_interp)
     
@@ -234,7 +232,6 @@ def main(raw_user_query, session_id):
 
     # Regular search for product information
     try:
-        ic()
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
