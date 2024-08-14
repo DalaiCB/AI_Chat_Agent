@@ -28,6 +28,7 @@ def query_interpretation(query):
         - None: "What is the total power of ADQ700?"
         - None: "What is the power?"
         - None: "Give me the precision."
+        - None: "Is there an enclosure kit available for the LPT100M?"
         - Llama: "How much power will I need?"
         - Llama: "What are my power requirements?"
         - Llama: "Can you help me figure out how much power I need?"
