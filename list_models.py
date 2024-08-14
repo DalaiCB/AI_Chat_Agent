@@ -10,16 +10,17 @@ def list_models_check(user_query):
     )
     
     prompt = """
-    Please analyze the following user query and determine if the user is asking for part numbers or model numbers related to a specific series of products. 
-    If the query is asking for such information, respond with "True". If the query does not match this pattern, respond with "False".
+    Please analyze the following user query to determine if it is explicitly asking for a list of part numbers or model numbers for a specific series of products. 
 
-    Examples for "True":
+    Respond with "True" if the user is directly requesting a list of all models or part numbers for a product series. Otherwise, respond with "False".
+
+    **Examples that should return "True":**
     1. "What are the models of LGA80?"
     2. "Can you give me the part number for LCM300 series?"
     3. "Please show me all the models of NGB60."
     4. "Give me the part numbers for LGA80D."
 
-    Examples for "False":
+    **Examples that should return "False":**
     1. "What is the warranty period for NGB60?"
     2. "How efficient is the LGA80D?"
     3. "What is the output current of LCM300?"
@@ -27,6 +28,9 @@ def list_models_check(user_query):
     5. "What is LGA80D?"
     6. "What is LCM 1000?"
     7. "Tell me about ERM150."
+    8. "What is the rated current on TF3000 models?"
+
+    **Important:** Only respond "True" if the query is specifically about obtaining a list of all available models or part numbers. If the query is about any other product details (like specifications, efficiency, current, etc.), respond with "False".
 
     User Query: {}
     Assistant:
