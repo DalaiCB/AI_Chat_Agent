@@ -183,6 +183,8 @@ def search(user_query, session_id):
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
 
+    print("--------------------")
+    
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
