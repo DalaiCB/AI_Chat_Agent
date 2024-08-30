@@ -12,7 +12,7 @@ def name_extracter(user_query):
     # System prompt. Query processing instructions for the AI assistant
     sys_prompt = """
     You are a helpful assistant that matches user queries to a list of product names. Given the list of product names below, find the best match for the user's query.
-    If there are no matching products, simply return None.
+    If there are no matching products, simply return None. Only return one product name per query even if you find multiple products in the query and multiple products matching products.
     """
 
     prompt = f"Product Names:\n{', '.join(product_names)}\n\nUser Query: {user_query}\n\nReturn only the full name of the matching product or None if unable to match to a name."
