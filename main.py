@@ -84,6 +84,25 @@ class SessionManager:
             print(f"Session ID {session_id} not found.")
             return None
 
+def display_console_msg(msg_type):
+    if msg_type == 'start':
+        msg = "START"
+    elif msg_type == 'end':
+        msg = "END"
+    else:
+        raise ValueError("Invalid message type. Use 'start' or 'end'.")
+
+    # Calculate padding to make the message width consistent
+    total_width = 30
+    padding = (total_width - len(msg)) // 2
+    formatted_msg = "\n\n" + "-" * padding + msg + "-" * padding + "\n"
+
+    # Ensure the formatted message has the correct width
+    if len(formatted_msg) < total_width:
+        formatted_msg = formatted_msg.strip() + "-" * (total_width - len(formatted_msg.strip())) + "\n"
+
+    os.write(1, formatted_msg.encode('utf-8'))
+
 
 # Function to process the raw query text
 def process_raw_query(raw_query):
@@ -176,12 +195,11 @@ def search(user_query, session_id):
 
     return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
-
-
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
-    os.write(1, "----------START----------\n".encode('utf-8'))
+
+    display_console_msg('start')
     
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
@@ -200,9 +218,11 @@ def main(raw_user_query, session_id):
             models = show_models(series_name)
             model_list = ', '.join(models)
 
+            display_console_msg('end')
             return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
+            display_console_msg('end')
             return general_request(user_query)
 
         if user_query_interp == "Product recommendation":            
@@ -215,17 +235,18 @@ def main(raw_user_query, session_id):
 
             try:
                 if special_case:
+                    display_console_msg('end')
                     return search_special_product(user_query)
             except Exception as e:
-                print("\n\t\tError: Special product search failed.\n", e)
-                
+                display_console_msg('end')
                 return ERROR_MESSAGE
 
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
-            
+
+            display_console_msg('end')
             return recommended_products
 
     except Exception as e:
@@ -235,13 +256,13 @@ def main(raw_user_query, session_id):
 
     # Regular search for product information
     try:
-        print()
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
         print("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
-    
+
+    display_console_msg('end')
     return agent_response
 
 
