@@ -1,6 +1,7 @@
 from icecream import ic
 from langchain.prompts import ChatPromptTemplate
 from openai import OpenAI
+import logging
 import os
 import csv
 
@@ -14,6 +15,7 @@ from list_models import list_models_check, show_models
 from openai_api import openai_call
 from special_product_search import search_special_product
 
+logging.basicConfig(level=logging.DEBUG)
 
 # Class to manage user sessions and save product names
 class SessionManager:
@@ -51,7 +53,7 @@ class SessionManager:
             last_names = self.sessions[session_id]
             
             if last_names and last_names[-1] == name:
-                print(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
+                logging.debug(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
                 return
             
             # Ensure maximum of 4 products
@@ -76,13 +78,13 @@ class SessionManager:
             
             # Check if the last product name is not empty
             if last_product:
-                print(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
+                logging.debug(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
                 return last_product
             else:
-                print(f"No product names found for Session ID: {session_id}")
+                logging.debug(f"No product names found for Session ID: {session_id}")
                 return None
         else:
-            print(f"Session ID {session_id} not found.")
+            logging.debug(f"Session ID {session_id} not found.")
             return None
 
 
@@ -111,14 +113,14 @@ def datasheet_file_path(product_name):
 def read_datasheet_from_file(product_name):
     datasheet_path = datasheet_file_path(product_name)
     
-    print("Datasheet Path:", datasheet_path)
+    logging.debug("Datasheet Path:", datasheet_path)
 
     if os.path.exists(datasheet_path):
         with open(datasheet_path, "r") as file:
             datasheet_content = file.read()
             return datasheet_content
     else:
-        print("\n\nDatasheet not found for", product_name, "\n\n")
+        logging.debug("\n\nDatasheet not found for", product_name, "\n\n")
         return f"Datasheet not found for {product_name}."
 
 
@@ -143,8 +145,8 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    print(f"\nExtracted Product Names: {extracted_product_names}")
-    print(f"Multiple Products: {multiple_products}\n")
+    logging.debug(f"\nExtracted Product Names: {extracted_product_names}")
+    logging.debug(f"Multiple Products: {multiple_products}\n")
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
@@ -183,19 +185,19 @@ def search(user_query, session_id):
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
 
-    print("-------------------")
+    logging.debug("-------------------")
     
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print("\n\nUser Query:", user_query)
-    print("User Query Interpretation:", user_query_interp)
+    logging.debug("\n\nUser Query:", user_query)
+    logging.debug("User Query Interpretation:", user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-        print("\n\nList Models:", list_models_only)
+        logging.debug("\n\nList Models:", list_models_only)
 
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
@@ -219,7 +221,7 @@ def main(raw_user_query, session_id):
                 if special_case:
                     return search_special_product(user_query)
             except Exception as e:
-                print("\n\t\tError: Special product search failed.\n", e)
+                logging.debug("\n\t\tError: Special product search failed.\n", e)
                 
                 return ERROR_MESSAGE
 
@@ -231,7 +233,7 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-        print("\n\t\tError: main()\n", e)
+        logging.debug("\n\t\tError: main()\n", e)
         
         return ERROR_MESSAGE
 
@@ -239,9 +241,9 @@ def main(raw_user_query, session_id):
     try:
         ic()
         agent_response, extracted_product_names = search(user_query, session_id)
-        print("\n\n\t\tProduct Names:", extracted_product_names)
+        logging.debug("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        print("\n\t\tError: General search failed.\n", e)
+        logging.debug("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
     
     return agent_response
@@ -251,5 +253,5 @@ if __name__ == "__main__":
     user_query = 'What is the MTBF of the lpt100?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
-    print("\n\t\tAgent Response:\n", agent_response)
-    #print(type(agent_response))
+    logging.debug("\n\t\tAgent Response:\n", agent_response)
+    #logging.debug(type(agent_response))
