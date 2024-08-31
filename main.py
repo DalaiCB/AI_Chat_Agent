@@ -1,7 +1,6 @@
 from icecream import ic
 from langchain.prompts import ChatPromptTemplate
 from openai import OpenAI
-import logging
 import os
 import csv
 
@@ -14,8 +13,6 @@ from general_llama import general_request
 from list_models import list_models_check, show_models
 from openai_api import openai_call
 from special_product_search import search_special_product
-
-logging.basicConfig(level=logging.DEBUG)
 
 # Class to manage user sessions and save product names
 class SessionManager:
