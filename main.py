@@ -183,7 +183,7 @@ def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
     start_msg = "----------START----------"
     print(start_msg)
-    os.write(1, start_msg)
+    os.write(1, start_msg.encode('utf-8'))
     
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
