@@ -181,7 +181,6 @@ def search(user_query, session_id):
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
-    start_msg = 
     os.write(1, "----------START----------\n".encode('utf-8'))
     
     # Process the raw user query text
