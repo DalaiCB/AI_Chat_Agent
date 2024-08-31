@@ -53,7 +53,7 @@ class SessionManager:
             last_names = self.sessions[session_id]
             
             if last_names and last_names[-1] == name:
-                logging.debug(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
+                ic(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
                 return
             
             # Ensure maximum of 4 products
@@ -78,13 +78,13 @@ class SessionManager:
             
             # Check if the last product name is not empty
             if last_product:
-                logging.debug(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
+                ic(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
                 return last_product
             else:
-                logging.debug(f"No product names found for Session ID: {session_id}")
+                ic(f"No product names found for Session ID: {session_id}")
                 return None
         else:
-            logging.debug(f"Session ID {session_id} not found.")
+            ic(f"Session ID {session_id} not found.")
             return None
 
 
@@ -113,14 +113,14 @@ def datasheet_file_path(product_name):
 def read_datasheet_from_file(product_name):
     datasheet_path = datasheet_file_path(product_name)
     
-    logging.debug("Datasheet Path:", datasheet_path)
+    ic("Datasheet Path:", datasheet_path)
 
     if os.path.exists(datasheet_path):
         with open(datasheet_path, "r") as file:
             datasheet_content = file.read()
             return datasheet_content
     else:
-        logging.debug("\n\nDatasheet not found for", product_name, "\n\n")
+        ic("\n\nDatasheet not found for", product_name, "\n\n")
         return f"Datasheet not found for {product_name}."
 
 
@@ -145,8 +145,8 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    logging.debug(f"\nExtracted Product Names: {extracted_product_names}")
-    logging.debug(f"Multiple Products: {multiple_products}\n")
+    ic(f"\nExtracted Product Names: {extracted_product_names}")
+    ic(f"Multiple Products: {multiple_products}\n")
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
@@ -185,19 +185,19 @@ def search(user_query, session_id):
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
 
-    logging.debug("-------------------")
+    ic("-------------------")
     
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    logging.debug("\n\nUser Query:", user_query)
-    logging.debug("User Query Interpretation:", user_query_interp)
+    ic("\n\nUser Query:", user_query)
+    ic("User Query Interpretation:", user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-        logging.debug("\n\nList Models:", list_models_only)
+        ic("\n\nList Models:", list_models_only)
 
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
@@ -221,7 +221,7 @@ def main(raw_user_query, session_id):
                 if special_case:
                     return search_special_product(user_query)
             except Exception as e:
-                logging.debug("\n\t\tError: Special product search failed.\n", e)
+                ic("\n\t\tError: Special product search failed.\n", e)
                 
                 return ERROR_MESSAGE
 
@@ -233,7 +233,7 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-        logging.debug("\n\t\tError: main()\n", e)
+        ic("\n\t\tError: main()\n", e)
         
         return ERROR_MESSAGE
 
@@ -241,9 +241,9 @@ def main(raw_user_query, session_id):
     try:
         ic()
         agent_response, extracted_product_names = search(user_query, session_id)
-        logging.debug("\n\n\t\tProduct Names:", extracted_product_names)
+        ic("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        logging.debug("\n\t\tError: General search failed.\n", e)
+        ic("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
     
     return agent_response
@@ -253,5 +253,5 @@ if __name__ == "__main__":
     user_query = 'What is the MTBF of the lpt100?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
-    logging.debug("\n\t\tAgent Response:\n", agent_response)
-    #logging.debug(type(agent_response))
+    ic("\n\t\tAgent Response:\n", agent_response)
+    #ic(type(agent_response))
