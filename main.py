@@ -50,7 +50,7 @@ class SessionManager:
             last_names = self.sessions[session_id]
             
             if last_names and last_names[-1] == name:
-                print(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
+                print_msg(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
                 return
             
             # Ensure maximum of 4 products
@@ -75,33 +75,17 @@ class SessionManager:
             
             # Check if the last product name is not empty
             if last_product:
-                print(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
+                print_msg(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
                 return last_product
             else:
-                print(f"No product names found for Session ID: {session_id}")
+                print_msg(f"No product names found for Session ID: {session_id}")
                 return None
         else:
-            print(f"Session ID {session_id} not found.")
+            print_msg(f"Session ID {session_id} not found.")
             return None
 
-def display_console_msg(msg_type):
-    if msg_type == 'start':
-        msg = "START"
-    elif msg_type == 'end':
-        msg = "END"
-    else:
-        raise ValueError("Invalid message type. Use 'start' or 'end'.")
-
-    # Calculate padding to make the message width consistent
-    total_width = 30
-    padding = (total_width - len(msg)) // 2
-    formatted_msg = "\n\n" + "-" * padding + msg + "-" * padding + "\n"
-
-    # Ensure the formatted message has the correct width
-    if len(formatted_msg) < total_width:
-        formatted_msg = formatted_msg.strip() + "-" * (total_width - len(formatted_msg.strip())) + "\n"
-
-    os.write(1, formatted_msg.encode('utf-8'))
+def print_msg(msg):
+    os.write(1, msg.encode('utf-8'))
 
 
 # Function to process the raw query text
@@ -129,14 +113,14 @@ def datasheet_file_path(product_name):
 def read_datasheet_from_file(product_name):
     datasheet_path = datasheet_file_path(product_name)
     
-    print("Datasheet Path:", datasheet_path)
+    print_msg("Datasheet Path:", datasheet_path)
 
     if os.path.exists(datasheet_path):
         with open(datasheet_path, "r") as file:
             datasheet_content = file.read()
             return datasheet_content
     else:
-        print("\n\nDatasheet not found for", product_name, "\n\n")
+        print_msg("\n\nDatasheet not found for", product_name, "\n\n")
         return f"Datasheet not found for {product_name}."
 
 
@@ -161,8 +145,8 @@ def search(user_query, session_id):
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
     
-    print(f"\nExtracted Product Names: {extracted_product_names}")
-    print(f"Multiple Products: {multiple_products}\n")
+    print_msg(f"\nExtracted Product Names: {extracted_product_names}")
+    print_msg(f"Multiple Products: {multiple_products}\n")
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
@@ -199,19 +183,19 @@ def search(user_query, session_id):
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
 
-    display_console_msg('start')
+    print_msg('\n\n-----START-----')
     
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print("\n\nUser Query:", user_query)
-    print("User Query Interpretation:", user_query_interp)
+    print_msg("\n\nUser Query:", user_query)
+    print_msg("User Query Interpretation:", user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-        print("\n\nList Models:", list_models_only)
+        print_msg("\n\nList Models:", list_models_only)
 
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
@@ -250,16 +234,16 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-        print("\n\t\tError: main()\n", e)
+        print_msg("\n\t\tError: main()\n", e)
         
         return ERROR_MESSAGE
 
     # Regular search for product information
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
-        print("\n\n\t\tProduct Names:", extracted_product_names)
+        print_msg("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        print("\n\t\tError: General search failed.\n", e)
+        print_msg("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
 
     display_console_msg('end')
@@ -270,5 +254,5 @@ if __name__ == "__main__":
     user_query = 'What is the MTBF of the lpt100?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
-    print("\n\t\tAgent Response:\n", agent_response)
-    #print(type(agent_response))
+    print_msg("\n\t\tAgent Response:\n", agent_response)
+    #print_msg(type(agent_response))
