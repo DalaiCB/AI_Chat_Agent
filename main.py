@@ -189,24 +189,24 @@ def main(raw_user_query, session_id):
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print_msg("\n\nUser Query:", user_query)
-    print_msg("User Query Interpretation:", user_query_interp)
+    print_msg(f"\n\nUser Query: {user_query}")
+    print_msg(f"User Query Interpretation: {user_query_interp}")
     
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-        print_msg("\n\nList Models:", list_models_only)
+        print_msg(f"\n\nList Models: {list_models_only}")
 
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
 
-            display_console_msg('end')
+            print_msg('\n\n------END------\n')
             return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
-            display_console_msg('end')
+            print_msg('\n\n------END------\n')
             return general_request(user_query)
 
         if user_query_interp == "Product recommendation":            
@@ -219,10 +219,10 @@ def main(raw_user_query, session_id):
 
             try:
                 if special_case:
-                    display_console_msg('end')
+                    print_msg('\n\n------END------\n')
                     return search_special_product(user_query)
             except Exception as e:
-                display_console_msg('end')
+                print_msg('\n\n------END------\n')
                 return ERROR_MESSAGE
 
             recommended_products = search_products(user_query, disable_print=True)
@@ -230,23 +230,23 @@ def main(raw_user_query, session_id):
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
 
-            display_console_msg('end')
+            print_msg('\n\n------END------\n')
             return recommended_products
 
     except Exception as e:
-        print_msg("\n\t\tError: main()\n", e)
+        print_msg(f"\n\t\tError: main()\n {e}")
         
         return ERROR_MESSAGE
 
     # Regular search for product information
     try:
         agent_response, extracted_product_names = search(user_query, session_id)
-        print_msg("\n\n\t\tProduct Names:", extracted_product_names)
+        print_msg(f"\n\n\t\tProduct Names: {extracted_product_names}")
     except Exception as e:
-        print_msg("\n\t\tError: General search failed.\n", e)
+        print_msg(f"\n\t\tError: General search failed.\n {e}")
         return ERROR_MESSAGE
 
-    display_console_msg('end')
+    print_msg('\n\n------END------\n')
     return agent_response
 
 
@@ -254,5 +254,5 @@ if __name__ == "__main__":
     user_query = 'What is the MTBF of the lpt100?'
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
-    print_msg("\n\t\tAgent Response:\n", agent_response)
+    print("\n\t\tAgent Response:\n", agent_response)
     #print_msg(type(agent_response))
