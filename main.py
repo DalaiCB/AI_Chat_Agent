@@ -239,7 +239,8 @@ def main(raw_user_query, session_id):
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        os.write(1, f"\n\t\tError: General search failed.{traceback.format_exc()}".encode('utf-8'))
+        os.write(1, f"\n\t\tError: General search failed.".encode('utf-8'))
+        os.write(1, traceback.format_exc())
         return ERROR_MESSAGE
     
     return agent_response
