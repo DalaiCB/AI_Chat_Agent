@@ -14,6 +14,7 @@ from list_models import list_models_check, show_models
 from openai_api import openai_call
 from special_product_search import search_special_product
 
+
 # Class to manage user sessions and save product names
 class SessionManager:
     # Initialize the SessionManager with the file path for saving sessions
@@ -50,7 +51,7 @@ class SessionManager:
             last_names = self.sessions[session_id]
             
             if last_names and last_names[-1] == name:
-                print_msg(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
+                print(f"Skipping saving {name} for Session ID {session_id} since it's the same as the last name.")
                 return
             
             # Ensure maximum of 4 products
@@ -75,17 +76,14 @@ class SessionManager:
             
             # Check if the last product name is not empty
             if last_product:
-                print_msg(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
+                print(f"Session ID: {session_id} Found\nLast Product Name: {last_product}")
                 return last_product
             else:
-                print_msg(f"No product names found for Session ID: {session_id}")
+                print(f"No product names found for Session ID: {session_id}")
                 return None
         else:
-            print_msg(f"Session ID {session_id} not found.")
+            print(f"Session ID {session_id} not found.")
             return None
-
-def print_msg(msg):
-    os.write(1, msg.encode('utf-8'))
 
 
 # Function to process the raw query text
@@ -113,14 +111,14 @@ def datasheet_file_path(product_name):
 def read_datasheet_from_file(product_name):
     datasheet_path = datasheet_file_path(product_name)
     
-    print_msg("Datasheet Path:", datasheet_path)
+    print("Datasheet Path:", datasheet_path)
 
     if os.path.exists(datasheet_path):
         with open(datasheet_path, "r") as file:
             datasheet_content = file.read()
             return datasheet_content
     else:
-        print_msg("\n\nDatasheet not found for", product_name, "\n\n")
+        print("\n\nDatasheet not found for", product_name, "\n\n")
         return f"Datasheet not found for {product_name}."
 
 
@@ -142,12 +140,11 @@ def get_datasheets(extracted_product_names):
 
 # Function to search for the product name in the user query and retrieve the datasheet content
 def search(user_query, session_id):
-    ic()
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
-    ic()
-    print_msg(f"\nExtracted Product Names: {extracted_product_names}")
-    print_msg(f"Multiple Products: {multiple_products}\n")
+    
+    print(f"\nExtracted Product Names: {extracted_product_names}")
+    print(f"Multiple Products: {multiple_products}\n")
 
     # Search for the last product name saved for the session ID
     name_in_memory = SessionManager().search_session(session_id)
@@ -180,34 +177,32 @@ def search(user_query, session_id):
 
     return llama(user_query, get_datasheets(extracted_product_names)), extracted_product_names
 
+
+
 # Main function to handle the user query and return the agent response
 def main(raw_user_query, session_id):
     ERROR_MESSAGE = "There was an issue with the model. Please try again."
 
-    print_msg('\n\n-----START-----')
-    
     # Process the raw user query text
     user_query = process_raw_query(raw_user_query)
     user_query_interp = query_interpretation(user_query)
 
-    print_msg(f"\n\nUser Query: {user_query}")
-    print_msg(f"User Query Interpretation: {user_query_interp}")
+    print("\n\nUser Query:", user_query)
+    print("User Query Interpretation:", user_query_interp)
     
     # Check if the user query is a product recommendation query
     try:
         list_models_only = list_models_check(user_query)
-        print_msg(f"\n\nList Models: {list_models_only}")
+        print("\n\nList Models:", list_models_only)
 
         if list_models_only:
             series_name, multiple_products = name_extracter(user_query)
             models = show_models(series_name)
             model_list = ', '.join(models)
 
-            print_msg('\n\n------END------\n')
             return f"All the models for {series_name} are {model_list}."
         
         if user_query_interp == "Llama":
-            print_msg('\n\n------END------\n')
             return general_request(user_query)
 
         if user_query_interp == "Product recommendation":            
@@ -220,40 +215,40 @@ def main(raw_user_query, session_id):
 
             try:
                 if special_case:
-                    print_msg('\n\n------END------\n')
                     return search_special_product(user_query)
             except Exception as e:
-                print_msg('\n\n------END------\n')
+                print("\n\t\tError: Special product search failed.\n", e)
+                
                 return ERROR_MESSAGE
 
             recommended_products = search_products(user_query, disable_print=True)
             
             if isinstance(recommended_products, str) and recommended_products == "NO PRODUCTS FOUND":
                 recommended_products = "No products found for the specified criteria."
-
-            print_msg('\n\n------END------\n')
+            
             return recommended_products
 
     except Exception as e:
-        print_msg(f"\n\t\tError: main()\n {e}")
+        print("\n\t\tError: main()\n", e)
         
         return ERROR_MESSAGE
 
     # Regular search for product information
     try:
+        ic()
         agent_response, extracted_product_names = search(user_query, session_id)
-        print_msg(f"\n\n\t\tProduct Names: {extracted_product_names}")
+        print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        print_msg(f"\n\t\tError: General search failed.\n {e}")
+        print("\n\t\tError: General search failed.\n", e)
         return ERROR_MESSAGE
-
-    print_msg('\n\n------END------\n')
+    
     return agent_response
 
 
 if __name__ == "__main__":
-    user_query = 'What is the MTBF of the lpt100?'
+    user_query = 'What is the rated current on TF3000 models'
+    
     session_id = "290ceba4-b8ef-49b3-a869-f4d89d95c548"
     agent_response = main(user_query, session_id)
     print("\n\t\tAgent Response:\n", agent_response)
-    #print_msg(type(agent_response))
+    #print(type(agent_response))
