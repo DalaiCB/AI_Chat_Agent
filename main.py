@@ -229,8 +229,7 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-       os.write(1, f"\n\t\tError: main()\n {e}")
-        
+        os.write(1, f"\n\t\tError: main()\n {e}")
         return ERROR_MESSAGE
 
     # Regular search for product information
