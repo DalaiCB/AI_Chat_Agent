@@ -217,7 +217,7 @@ def main(raw_user_query, session_id):
                 if special_case:
                     return search_special_product(user_query)
             except Exception as e:
-                print("\n\t\tError: Special product search failed.\n", e)
+                os.write(1, f"\n\t\tError: Special product search failed.\n {e}")
                 
                 return ERROR_MESSAGE
 
@@ -229,7 +229,7 @@ def main(raw_user_query, session_id):
             return recommended_products
 
     except Exception as e:
-        print("\n\t\tError: main()\n", e)
+       os.write(1, f"\n\t\tError: main()\n {e}")
         
         return ERROR_MESSAGE
 
@@ -239,7 +239,7 @@ def main(raw_user_query, session_id):
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        print("\n\t\tError: General search failed.\n", e)
+        os.write(1, f"\n\t\tError: General search failed.\n{e}")
         return ERROR_MESSAGE
     
     return agent_response
