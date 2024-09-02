@@ -142,9 +142,10 @@ def get_datasheets(extracted_product_names):
 
 # Function to search for the product name in the user query and retrieve the datasheet content
 def search(user_query, session_id):
+    ic()
     # Extract the product name from the user query
     extracted_product_names, multiple_products = name_extracter(user_query)
-    
+    ic()
     print_msg(f"\nExtracted Product Names: {extracted_product_names}")
     print_msg(f"Multiple Products: {multiple_products}\n")
 
