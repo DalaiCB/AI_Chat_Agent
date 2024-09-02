@@ -3,6 +3,7 @@ from langchain.prompts import ChatPromptTemplate
 from openai import OpenAI
 import os
 import csv
+import traceback
 
 from llama_requests import llama
 from gpt_extract_name import name_extracter
@@ -238,7 +239,7 @@ def main(raw_user_query, session_id):
         agent_response, extracted_product_names = search(user_query, session_id)
         print("\n\n\t\tProduct Names:", extracted_product_names)
     except Exception as e:
-        os.write(1, f"\n\t\tError: General search failed.\n{str(e)}".encode('utf-8'))
+        os.write(1, f"\n\t\tError: General search failed.{traceback.format_exc()}".encode('utf-8'))
         return ERROR_MESSAGE
     
     return agent_response
