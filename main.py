@@ -99,7 +99,7 @@ def process_raw_query(raw_query):
 
 # Function to get the file path for the datasheet of a product
 def datasheet_file_path(product_name):
-    datasheets_dir = "data/test_md"
+    datasheets_dir = "data/test_md_updated"
     
     matching_files = search_product_files(product_name)
 
