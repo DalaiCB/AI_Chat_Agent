@@ -137,18 +137,6 @@ Compare old and new saved images alongside the data. Create custom reports to vi
 
 advancedenergy.com
 ---
-# MEASUREMENT FIELD AND PIXEL RESOLUTION
-
-|Distance of Object|TS724DV-PT|TS724| | | |
-|---|---|---|---|---|---|
-|10 m (32.8’)|8° (75 mm) lens 1.4 m x 1.1 m (4.7’ x 3.5’)|12° (50 mm) lens 2.2 m x 1.6 m (7.1’ x 5.3’)|25° (25 mm) lens 4.3 m x 3.3 m (14.2’ x 10.7’)|42° (14 mm) lens 7.8 m x 5.8 m (25.5 x 19.1’)|70° (5.3 mm) lens 14 m x 10.5 m (45.7’ x 34.3’)|
-|25 m (82’)|8° (75 mm) lens 3.6 m x 2.7 m (11.9’ x 8.9’)|12° (50 mm) lens 5.4 m x 4.1 m (17.8’ x 13.4’)|25° (25 mm) lens 10.9 m x 8.2 m (35.7’ x 26.7’)|42° (14 mm) lens 19.4 m x 14.6 m (63.7’ x 47.8’)|70° (5.3 mm) lens 35 m x 26 m (114’ x 86’)|
-|50 m (164’)|8° (75 mm) lens 7.2 m x 5.4 m (23.8’ x 17.8’)|12° (50 mm) lens 10.9 m x 8.2 m (35.7’ x 26.7’)|25° (25 mm) lens 21.7 m x 16.3 m (71.3’ x 53.5’)|42° (14 mm) lens 38.8 m x 29.1 m (127’ x 96’)|70° (5.3 mm) lens 70 m x 52 m (229’ x 172’)|
-
-The size of the measured object must be at least 3 x 3 pixels to guarantee precise temperature determination. This ensures that at least one pixel of the detector is completely covered.
-
-Objects with different diameters and 3 pixels being measured.
-
 Pixels of the detector
 ---
 # TECHNICAL DATA
@@ -300,23 +288,6 @@ advancedenergy.com
 
 advancedenergy.com  11
 ---
-About Advanced Energy
-
-Advanced Energy (AE) has devoted more than three decades to perfecting power for its global customers. AE designs and manufactures highly engineered, precision power conversion, measurement and control solutions for mission-critical applications and processes.
-
-AE’s power solutions enable customer innovation in complex semiconductor and industrial thin film plasma manufacturing processes, demanding high and low voltage applications, and temperature-critical thermal processes.
-
-With deep applications know-how and responsive service and support across the globe, AE builds collaborative partnerships to meet rapid technological developments, propel growth for its customers and power the future of technology.
-
-For international contact information, visit advancedenergy.com. Specifications are subject to change without notice. Not responsible for errors or omissions. ©2019 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy®, FurnaceSpectionTM, LumaSpecTM, and AE® are U.S. trademarks of Advanced Energy Industries, Inc.
-
-sales.support@aei.com
-
-+1 970 221 0108
-
-ENG-ThermalSpection724-235-01 6.19
----
-# THERMAL INSPECTION CVM
 
 Real-time thermal imaging solution for fault detection and monitoring for critical vessels such as gasifier skin temperature.
 
@@ -448,31 +419,3 @@ UP TO 24 CAMERAS
 |Email|Web Interface|
 |---|---|
 |Reports and Alerts|for authenticated users|
-
-For international contact information, visit advancedenergy.com.
-
-sales.support@aei.com
-
-+1 970 221 0108
-
-Field Switch Enclosure
-
-Ethernet
-
-Fiber Optic
-
-Control Room
-
-LumaSpec RT
-
-Plant Network
-
-Data Historian
-
-Alarms & DCS
-
-LumaTrond with SQL server
-
-Specifications are subject to change without notice. Not responsible for errors or omissions. ©2019 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy®, ThermalSpectionTM, LumaSpecTM, and AE® are U.S. trademarks of Advanced Energy Industries, Inc.
-
-ENG-ThermalSpectionCVM-235-01 5.19

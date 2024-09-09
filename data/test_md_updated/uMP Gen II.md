@@ -240,54 +240,6 @@ advancedenergy.com
 |X|54.0|4.4|NA|
 |Y|60.0|4.0|NA|
 ---
-# DERATING CURVES - μMP10
-
-| |Standard Fan (12 V/24 V/48 V)|Reverse FAN (12 V/24 V/48V)|
-|---|---|---|
-|85 VAC|1200|1200|
-|100 VAC|1100|1100|
-|110 VAC|1000|μMP10/16 (AC input on opposite side)|
-|200 VAC|900|S|
-|264 VAC|800|S|
-| |L|S|
-| |O|S|
-| |T|S|
-| |4|S|
-| | |Input|
-| | |85 - 264 VAC|
-| | |200 - 264 VAC|
-|Temperature|μMP04 = 4 available slots|μMP10 = 6 available slots|
-| |400 W max.|1000 W max.|
-| |μMP09 = 4 available slots|μMP16 = 6 available slots|
-| |550 W max.|1200 W max.|
-| | |1800 W max.|
-
-advancedenergy.com
----
-# PIN CONNECTORS
-
-Figure 1. AC Input
-
-|IEC Connector|Pin|Function|
-|---|---|---|
-| |1|AC neutral|
-| |2|AC line (hot)|
-|Terminal Block|3|Chassis (earth) ground|
-
-J1 PFC Input Connector (control & signals)
-
-|Pin|Function|
-|---|---|
-|1|Input AC OK - “emitter”|
-|2|Input AC OK - “collector”|
-|3|Global DC OK - “emitter”|
-|4|Global DC OK - “collector”|
-|5|Spare|
-|6|Global inhibit/optional enable logic “1”|
-|7|Global inhibit/optional enable logic “0”|
-|8|Global inhibit/optional enable return|
-|9|+5 VSB housekeeping|
-|10|+5 VSB housekeeping return|
 
 Figure 2. Connector J1 & J2
 
@@ -440,19 +392,3 @@ The HUP module shall provide additional 224μF bulk capacitance (typ.). Typical 
 
 advancedenergy.com
 ---
-ABOUT ADVANCED ENERGY
-Advanced Energy (AE) has devoted more than three decades to perfecting power for its global customers. AE designs and manufactures highly engineered, precision power conversion, measurement and control solutions for mission-critical applications and processes.
-
-Our products enable customer innovation in complex applications for a wide range of industries including semiconductor equipment, industrial, manufacturing, telecommunications, data center computing, and medical. With deep applications know-how and responsive service and support across the globe, we build collaborative partnerships to meet rapid technological developments, propel growth for our customers, and innovate the future of power.
-
-TRUST
-
-For international contact information, visit advancedenergy.com.
-
-powersales@aei.com (Sales Support)
-productsupport.ep@aei.com (Technical Support)
-+1 888 412 7832
-
-Specifications are subject to change without notice. Not responsible for errors or omissions. ©2023 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy®, and AE® are U.S. trademarks of Advanced Energy Industries, Inc.
-
-ENG-μMP-235-01 12.25.23

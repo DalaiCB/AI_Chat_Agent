@@ -359,26 +359,3 @@ Type Current: Voltage
 
 advancedenergy.com 9
 ---
-# ORDERING INFORMATION
-
-For ordering information, please contact your local Advanced Energy sales representative.
-
-ABOUT ADVANCED ENERGY
-
-Advanced Energy (AE) has devoted more than three decades to perfecting power for its global customers. AE designs and manufactures highly engineered, precision power conversion, measurement and control solutions for mission-critical applications and processes.
-
-AE’s power solutions enable customer innovation in complex semiconductor and industrial thin film plasma manufacturing processes, demanding high and low voltage applications, and temperature-critical thermal processes.
-
-With deep applications know-how and responsive service and support across the globe, AE builds collaborative partnerships to meet rapid technological developments, propel growth for its customers, and power the future of technology.
-
-PRECISION | POWER | PERFORMANCE
-
-For international contact information, visit advanced-energy.com.
-
-Specifications are subject to change without notice. Not responsible for errors or omissions. ©2021 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy®, and AE® are U.S. trademarks of Advanced Energy Industries, Inc.
-
-sales.support@aei.com
-
-+1.970.221.0108
-
-ENG-Thyro-A-235-03 8.31

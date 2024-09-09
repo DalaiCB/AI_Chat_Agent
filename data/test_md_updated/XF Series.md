@@ -227,22 +227,6 @@ Input Connectors
 
 Advanced Energy modular power supplies have a variety of input connector options to ease system integration. These include IEC, Input cables (3-wire) and IEC to Screw Terminal Adaptor.
 
-|J1|J2|
-|---|---|
-|Input AC 100 V-240 V|See Instruction Manual|
-|700 Max Operating Temperature| |
-
-|Pin|J1|J2|
-|---|---|---|
-|1|Line|Common|
-|2|Neutral|+5V bias|
-|3|Earth|not used|
-|4|—|AC fail|
-|5|—|Fan fail|
-|6|—|Global enable|
-|7|—|Temp alarm|
-|8|—|Global inhibit|
-
 Input Mating Connectors
 
 |J1|IEC320 type female plug rated 13, locking IEC cable and connector: Schaffner EMC part number IL13-US1-SVT-3100-183|
@@ -260,40 +244,6 @@ advancedenergy.com
 |Pout (W)|Pout (W)|
 |---|---|
 |MECHANICAL SPECIFICATIONS (CONTINUED)| |
-
-# XF Series Derating Curves
-
-| | | | |Temperature Derating Curve for XF Models| | | | | | | | | | | |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | |120 V & 230 V| | | | | | | | |
-| |1100|XFA= Forward & Reverse Fans| | | | | | | | | | | | | |
-|1000| | | | | | |120 V & 230 V| | | | | | | | |
-| |900| | | | | |XFB= Forward & Reverse Fans| | | | | | | | |
-| |800| | | | | |120 V = XFC & XFN| | | | | | | | |
-| | | | | | | |Forward Fans| | | | | | | | |
-| |700| | | | | |120 V = XFC & XFN| | | | | | | | |
-| |600| | | | | |Reverse Fans| | | | | | | | |
-| | | | | | | |230 V = XFC & XFN| | | | | | | | |
-| |500| | | | | |Forward Fans| | | | | | | | |
-| |400| | | | | |230V = XFC & XFN| | | | | | | | |
-| | | | | | | |Reverse Fans| | | | | | | | |
-| |300| | | | | | | | | | | | | | |
-| |-55|-45|-35|-25|-15|-5|5|15|25|35|45|55|65|75| |
-| | | | | | | | | | | | | | | |Temperature (ºC)|
-
-| | | |Line Derating Curve for XF Models (@ 60ºC)| | | | | |
-|---|---|---|---|---|---|---|---|---|
-|1100| | | | | | |XFA = Forward & Reverse Fans| |
-|1000| | | | | | |XFB = Forward & Reverse Fans| |
-|900| | | | | | |XFC & XFN = Forward Fans| |
-|800| | | | | | |XFC & XFN = Reverse Fans| |
-|700| | | | | | | | |
-|600| | | | | | | | |
-|500| | | | | | | | |
-|400| | | | | | | | |
-|300| | | | | | | | |
-| |90|120|150|180| |210|240|270|
-| | | | | | |Vin AC (V)| | |
 
 8 advancedenergy.com
 ---
@@ -333,18 +283,3 @@ Option 0: Standard Fan
 
 advancedenergy.com 9
 ---
-About Advanced Energy
-
-Advanced Energy (AE) has devoted more than three decades to perfecting power for its global customers. AE designs and manufactures highly engineered, precision power conversion, measurement and control solutions for mission-critical applications and processes.
-
-AE’s power solutions enable customer innovation in complex semiconductor and industrial thin film plasma manufacturing processes, demanding high and low voltage applications, and temperature-critical thermal processes.
-
-For international contact information, visit advancedenergy.com
-
-With deep applications know-how and responsive service and support across the globe, AE builds collaborative partnerships to meet rapid technological developments, propel growth for its customers and power the future of technology.
-
-PRECISION POWER PERFORMANCE
-
-Specifications are subject to change without notice. Not responsible for errors or omissions. ©2022 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy® and AE® are U.S. trademarks, and CoolX® is a U.S. and Europe trademark of Advanced Energy Industries, Inc.
-
-ENG-LV-XF-235-15 04.20.22
